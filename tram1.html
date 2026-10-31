@@ -462,6 +462,94 @@ table.bd{border-collapse:separate;border-spacing:6px;margin-left:-6px}
   :root[data-chieu] .cach-hang.doc{flex-direction:row}
   :root[data-chieu] .cach-hang.doc .cach-o{display:block;text-align:center;padding:2px 4px}
 }
+
+.bc-luoi,.mm-luoi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.mm-luoi{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+@media (max-width:860px){.bc-luoi,.mm-luoi{grid-template-columns:1fr}}
+#bc-hinh svg{width:100%;max-width:520px;height:auto;margin:0 auto}
+.bc-ke{stroke:var(--vien);stroke-width:1.5}
+.bc-truc{stroke:var(--chu);stroke-width:2}
+.bc-so-truc{font-family:var(--chu-to);font-size:17px;fill:var(--chu-phu)}
+.bc-ten-truc{font-family:var(--chu-tieude);font-size:17px;fill:var(--chu-phu)}
+.bc-cot{cursor:pointer;outline:none}
+.bc-cot .bc-nen{fill:transparent;stroke:transparent;stroke-width:3}
+.bc-cot rect.bc-than{fill:var(--lam-nhat);stroke:var(--lam);stroke-width:2.5}
+.bc-cot .bc-so{font-family:var(--chu-to);font-weight:800;font-size:22px;fill:var(--chu)}
+.bc-cot .bc-ten{font-family:var(--chu-to);font-weight:700;font-size:20px;fill:var(--chu)}
+.bc-cot.chon .bc-nen{fill:var(--vang-nhat);stroke:var(--vang)}
+.bc-cot:focus-visible .bc-nen{stroke:var(--vang);stroke-width:4}
+.bc-cot.da rect.bc-than{opacity:.35}
+.bc-cot.dich rect.bc-than{fill:var(--tim-nhat);stroke:var(--tim)}
+.cho-the .the[draggable="true"]{cursor:grab}
+#bc-hang .o{min-height:84px}
+.o .gia-o{font-size:16px;font-weight:700;color:var(--chu-phu)}
+.o.dung-o{border-color:var(--dung);border-style:solid;background:var(--la-nhat)}
+.o.sai-o{border-color:var(--sai);border-style:solid;background:var(--san-nhat)}
+.o.keo-vao{border-color:var(--vang);border-style:solid;background:var(--vang-nhat)}
+.o.dem-o{border-color:var(--tim);border-style:solid}
+.o{position:relative}
+.o .bc-dem{position:absolute;top:3px;right:3px;min-width:26px;border-radius:999px;font-size:16px;font-weight:800;color:var(--nut-chu);background:var(--tim);padding:0 7px;line-height:1.5}
+.o .bc-dem.lam{background:var(--lam)}
+.o .bc-dem:empty{display:none}
+.bc-nhap{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.bc-nhap label{font-weight:700;font-size:17px;white-space:nowrap}
+#bc-chon .the,#mm-menu .the{font-size:18px}
+.mm-dich{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:2px 0 6px}
+.mm-dich .mm-nhan{font-size:16px;font-weight:800;color:var(--chu-phu)}
+.mm-dich .mm-o{border:2px solid var(--tim);background:var(--tim-nhat);border-radius:10px;padding:2px 12px;font-weight:800;font-size:20px}
+.mm-dich .mm-mui{color:var(--chu-phu);font-weight:800}
+.mm-nhom{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}
+.mm-nhom .mm-nhan{font-size:16px;font-weight:800;color:var(--chu-phu)}
+#mm-menu .the{padding:5px 12px}
+#mm-menu .the[aria-pressed="true"]{border-color:var(--tim);background:var(--tim-nhat)}
+#mm-menu .the:disabled{cursor:default;opacity:.75}
+#mm-bo li{display:block}
+#mm-bo li .tt{display:inline-block;margin:0 6px 0 0}
+#mm-bo li[role="button"]{cursor:pointer}
+#mm-bo li .con{margin:0 0 0 6px;white-space:nowrap}
+.mm-hoi-dong{margin:10px 0 0}
+.mm-cach{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px;overflow-y:auto;max-height:180px}
+.mm-cach span{border:2px solid var(--vien);border-radius:10px;padding:1px 10px;background:var(--nen);font-size:17px;font-weight:700;white-space:nowrap}
+.mm-cach span.dich{border-color:var(--tim);background:var(--tim-nhat)}
+#bieu-do .nho,#bo-manh-moi .nho{font-size:16px}
+.bc-doi summary{cursor:pointer;font-weight:700;color:var(--lam)}
+@media (max-width:560px){
+  #bc-de,#mm-de{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  #bc-de .the,#mm-de .the{flex:none;white-space:nowrap;font-size:17px;padding:6px 12px}
+  #bc-hang{flex-wrap:nowrap;gap:4px}
+  #bc-hang .o{flex:1 1 0;min-width:0;min-height:70px}
+  #bc-hang .o .ten-o{font-size:17px}
+  #bc-hang .o .gia-o{font-size:15px}
+  #bieu-do .dan,#bo-manh-moi .dan{font-size:17px}
+  #bc-hinh svg{max-height:220px}
+  .bc-luoi,.mm-luoi{gap:6px}
+}
+@media (min-width:700px){
+  :root[data-chieu] .bc-luoi,:root[data-chieu] .mm-luoi{gap:14px}
+  :root[data-chieu] .mm-luoi{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  :root[data-chieu] #mm-doan{width:46px}
+  :root[data-chieu] #bc-hinh svg{max-height:236px;width:auto;max-width:100%}
+  :root[data-chieu] #bc-hang .o{min-height:62px;padding:0}
+  :root[data-chieu] .o .so-o,:root[data-chieu] .o .gia-o{font-size:16px;line-height:1.2}
+  :root[data-chieu] .o .bc-dem{font-size:16px;line-height:1.25}
+  :root[data-chieu] #bc-chon .the,:root[data-chieu] #mm-menu .the{font-size:16px;padding:1px 8px}
+  :root[data-chieu] .mm-nhom{margin:0 0 2px;gap:2px 4px}
+  :root[data-chieu] .mm-nhom .mm-nhan{flex-basis:auto}
+  :root[data-chieu] #mm-menu .the{padding:1px 6px;line-height:1.2}
+  :root[data-chieu] #mm-bo li{padding:1px 8px;line-height:1.3}
+  :root[data-chieu] .mm-tieu{display:none}
+  :root[data-chieu] .mm-dich{margin:0 0 2px}
+  :root[data-chieu] .mm-dich{gap:3px;flex-wrap:nowrap}
+  :root[data-chieu] .mm-dich .mm-nhan{display:none}
+  :root[data-chieu] .mm-dich .mm-o{font-size:16px;padding:0 7px}
+  :root[data-chieu] .mm-dich .mm-mui{font-size:16px}
+  :root[data-chieu] #mm-mo{margin:0 0 2px}
+  :root[data-chieu] .mm-cach{max-height:none;margin:4px 0 0}
+  :root[data-chieu] .mm-cach span{font-size:16px;padding:0 6px}
+  :root[data-chieu] #bc-hoi{margin:2px 0}
+  :root[data-chieu] .mm-hoi-dong{margin:4px 0 0}
+  :root[data-chieu] .mm-chieu,:root[data-chieu] #mm-goc.co-mm{display:none}
+}
 @media (max-width:560px){header .nut-chieu{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
@@ -493,6 +581,8 @@ table.bd{border-collapse:separate;border-spacing:6px;margin-left:-6px}
     <button role="tab" id="tab-o-khoa" aria-controls="o-khoa" data-k="o-khoa">Mục 7 · Ổ khoá số</button>
     <button role="tab" id="tab-bang-do" aria-controls="bang-do" data-k="bang-do">Mục 8 · Bảng ✓ ✗</button>
     <button role="tab" id="tab-hai-phia" aria-controls="hai-phia" data-k="hai-phia">Mục 10 · Hai phía</button>
+    <button role="tab" id="tab-bieu-do" aria-controls="bieu-do" data-k="bieu-do">Mục 11 · Biểu đồ thành hàng</button>
+    <button role="tab" id="tab-bo-manh-moi" aria-controls="bo-manh-moi" data-k="bo-manh-moi">Mục 12 · Cần mấy manh mối là đủ?</button>
   </nav>
 
   <section class="ban" id="so-sanh" role="tabpanel" aria-labelledby="tab-so-sanh">
@@ -761,6 +851,72 @@ table.bd{border-collapse:separate;border-spacing:6px;margin-left:-6px}
     <div class="cach-ds" id="an-cach"></div>
     <div class="cot-loi" id="an-cotloi" hidden><span class="nhan">Nhớ</span>Chắc chắn đúng = đúng ở MỌI cách xếp. Chắc chắn sai = sai ở MỌI cách xếp. Có cách đúng, có cách sai = đề chưa cho đủ để biết.</div>
   </section>
+
+  <section class="ban" id="bieu-do" role="tabpanel" aria-labelledby="tab-bieu-do" hidden>
+    <h2>Biểu đồ thành hàng</h2>
+    <p class="dan">Mỗi cột của biểu đồ là một bạn trong hàng. Con chạm vào một cột (hoặc một thẻ tên), rồi chạm vào một ô để đặt cột ấy vào hàng; trên máy tính, con kéo thẻ tên thả vào ô cũng được. Con trả lời câu hỏi, rồi mới bấm “Kiểm tra”.</p>
+    <div class="bo-de" id="bc-de" aria-label="Chọn bài"></div>
+    <div class="bc-luoi">
+      <div>
+        <p class="de-bai" id="bc-mo"></p>
+        <div id="bc-hinh"></div>
+        <div class="cho-the" id="bc-the" aria-label="Thẻ tên chưa xếp"></div>
+        <details class="cai bc-doi" id="bc-doi">
+          <summary class="tieu">Đổi số của từng cột</summary>
+          <div class="bc-nhap" id="bc-nhap"></div>
+          <p class="tieu">Hàng xếp: <span class="cap" id="bc-chieu"><button type="button" data-c="nhieu">từ nhiều đến ít</button><button type="button" data-c="it">từ ít đến nhiều</button></span></p>
+        </details>
+      </div>
+      <div>
+        <h3 class="tieu" id="bc-xep" style="margin-top:0"></h3>
+        <div class="hang" id="bc-hang"></div>
+        <div class="mui"><span id="bc-dau">Đầu hàng</span><span></span><span id="bc-cuoi">Cuối hàng</span></div>
+        <div class="hang-nut" id="bc-nut-hang">
+          <button class="nut phu2" id="bc-kiem-hang">Kiểm hàng</button>
+          <button class="nut phu2" id="bc-xoa">Xếp lại từ đầu</button>
+        </div>
+        <p class="de-bai" id="bc-hoi"></p>
+        <div class="ba-o" id="bc-chon" aria-label="Con chọn một ô"></div>
+        <div class="hang-nut" id="bc-nut">
+          <button class="nut vang" id="bc-kiem">Kiểm tra</button>
+          <button class="nut phu2" id="bc-lai">Làm lại</button>
+        </div>
+        <div class="ket" id="ket-bc" aria-live="polite"></div>
+        <div class="cot-loi" id="bc-cotloi" hidden><span class="nhan">Nhớ</span>Ghi số của từng cột ra trước, rồi mới xếp hàng. Xếp từ nhiều đến ít thì cột có số lớn nhất đứng đầu hàng.</div>
+      </div>
+    </div>
+    <p class="gioi-han"><b>Giới hạn:</b> Hai cột bằng nhau là hai bạn cùng hạng: xếp thành hàng thì đề chưa cho đủ để biết cột nào đứng trước. <b>Máy làm gì:</b> Máy thử mọi cách xếp các cột thành một hàng, giữ những hàng xếp đúng chiều, rồi mới kết luận.</p>
+  </section>
+
+  <section class="ban" id="bo-manh-moi" role="tabpanel" aria-labelledby="tab-bo-manh-moi" hidden>
+    <h2>Cần mấy manh mối là đủ?</h2>
+    <p class="dan">Con đóng vai người ra đề. Mỗi manh mối chỉ nói MỘT điều. Con chạm vào một manh mối để chọn (chạm lần nữa để bỏ): sau mỗi manh mối, máy đếm còn mấy cách xếp. Bộ manh mối tốt chỉ để lại đúng một cách: hàng của con.</p>
+    <div class="bo-de" id="mm-de" aria-label="Chọn bài"></div>
+    <div class="mm-luoi">
+      <div>
+        <p class="de-bai" id="mm-mo"></p>
+        <div class="mm-dich" id="mm-dich" aria-label="Hàng cần xếp, tính từ đầu hàng"></div>
+        <p class="nho mm-chieu">Mũi tên: từ đầu hàng tới cuối hàng.</p>
+        <div class="hang-nut cai"><button class="nut phu2" id="mm-doi-hang">Đổi hàng của con</button></div>
+        <div id="mm-menu" aria-label="Các manh mối"></div>
+      </div>
+      <div>
+        <h3 class="tieu mm-tieu" style="margin-top:0">Bộ manh mối của con</h3>
+        <p class="nho" id="mm-goc"></p>
+        <ul class="manh-moi" id="mm-bo"></ul>
+        <p class="de-bai mm-hoi-dong"><label for="mm-doan" id="mm-hoi"></label> <input class="so" id="mm-doan" inputmode="numeric" maxlength="2"></p>
+        <div class="hang-nut" id="mm-nut">
+          <button class="nut vang" id="mm-kiem">Kiểm tra</button>
+          <button class="nut phu2" id="mm-xem" aria-expanded="false">Xem các cách còn lại</button>
+          <button class="nut phu2" id="mm-lai">Làm lại</button>
+        </div>
+        <div class="ket" id="ket-mm" aria-live="polite"></div>
+        <div class="mm-cach" id="mm-cach" hidden></div>
+        <div class="cot-loi" id="mm-cotloi" hidden><span class="nhan">Nhớ</span>Bộ manh mối tốt chỉ để lại đúng một cách xếp: viết xong, con tự giải lại để kiểm tra. Nếu còn hơn một cách xếp, con viết thêm manh mối.</div>
+      </div>
+    </div>
+    <p class="gioi-han"><b>Giới hạn:</b> Đề xếp theo chỗ đứng thì manh mối phải nói về chỗ đứng: “cao hơn” không giúp. <b>Máy làm gì:</b> Máy thử mọi cách xếp các bạn (ba bạn: 6 cách, bốn bạn: 24 cách) và mọi bộ manh mối, rồi mới kết luận.</p>
+  </section>
 </div>
 
 <p class="ban-quyen">© Trạm Tư Duy · Phòng thí nghiệm dùng miễn phí cho học sinh.</p>
@@ -770,7 +926,7 @@ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
 
-const keys=['so-sanh','bap-benh','xep-hang','dem-hai-dau','doi-cho','o-khoa','bang-do','hai-phia','cau-noi','ai-noi-dung'];
+const keys=['so-sanh','bap-benh','xep-hang','dem-hai-dau','doi-cho','o-khoa','bang-do','hai-phia','cau-noi','ai-noi-dung','bieu-do','bo-manh-moi'];
 const BI_DANH={'vong-tron':'dem-hai-dau','giua-hai-ban':'dem-hai-dau'};
 function moTab(k){ k=BI_DANH[k]||k; if(!keys.includes(k)) k='so-sanh';
   keys.forEach(x=>{ $('#'+x).hidden = x!==k; $('#tab-'+x).setAttribute('aria-selected', x===k); });
@@ -1678,8 +1834,8 @@ const DE_AN=[
   {ma:'ghe-rap',nut:'Ghế rạp',boi:'ghe_rap',mo:'Năm bạn Lợi, Thơ, Nghĩa, Diệu, Sỹ ngồi một hàng 5 ghế trong rạp, ghế 1 đến ghế 5 từ trái sang phải.',ten:['Lợi','Thơ','Nghĩa','Diệu','Sỹ'],nhan:['Ghế 1','Ghế 2','Ghế 3','Ghế 4','Ghế 5'],
    mm:[{t:'canh',a:'Thơ',b:'Lợi',chu:'Thơ ngồi cạnh Lợi.'},{t:'thu',a:'Nghĩa',k:1,chu:'Nghĩa ngồi ghế 1.'},{t:'thu',a:'Diệu',k:5,chu:'Diệu ngồi ghế 5.'},{t:'khongcanh',a:'Sỹ',b:'Nghĩa',chu:'Sỹ KHÔNG ngồi cạnh Nghĩa.'}],
    noi:'Su',loi:'Sỹ ngồi ghế chính giữa, ghế 3.',menh:{t:'thu',a:'Sỹ',k:3}},
-  {ma:'tang-nha',nut:'Tầng nhà',boi:'tang_nha',mo:'Toà nhà có 5 tầng, tầng 1 ở dưới cùng. Năm bạn Thục, Vinh, Xuyến, Uy, Liên, mỗi bạn sống ở một tầng.',ten:['Thục','Vinh','Xuyến','Uy','Liên'],nhan:['Tầng 1','Tầng 2','Tầng 3','Tầng 4','Tầng 5'],doc:true,dao:true,
-   mm:[{t:'thu',a:'Thục',k:2,chu:'Thục sống ở tầng 2.'},{t:'truoc',a:'Thục',b:'Vinh',chu:'Vinh sống ở tầng cao hơn Thục.'},{t:'ngay',a:'Vinh',b:'Xuyến',chu:'Xuyến sống ở ngay tầng trên tầng của Vinh.'},{t:'khong',a:'Uy',k:1,chu:'Uy KHÔNG sống ở tầng 1.'}],
+  {ma:'tang-nha',nut:'Tầng nhà',boi:'tang_nha',mo:'Toà nhà có 5 tầng, tầng 1 ở dưới cùng. Năm bạn Thục, Vĩ, Xuyến, Uy, Liên, mỗi bạn sống ở một tầng.',ten:['Thục','Vĩ','Xuyến','Uy','Liên'],nhan:['Tầng 1','Tầng 2','Tầng 3','Tầng 4','Tầng 5'],doc:true,dao:true,
+   mm:[{t:'thu',a:'Thục',k:2,chu:'Thục sống ở tầng 2.'},{t:'truoc',a:'Thục',b:'Vĩ',chu:'Vĩ sống ở tầng cao hơn Thục.'},{t:'ngay',a:'Vĩ',b:'Xuyến',chu:'Xuyến sống ở ngay tầng trên tầng của Vĩ.'},{t:'khong',a:'Uy',k:1,chu:'Uy KHÔNG sống ở tầng 1.'}],
    noi:'Na',loi:'Mình vẽ toà nhà ra xem nào. Uy sống ở tầng trên cùng.',menh:{t:'thu',a:'Uy',k:5}},
   {ma:'gio-den',nut:'Giờ đến lớp',boi:'gio_den',mo:'Bốn bạn Ngát, Khiêm, Liễu, Trung đến lớp vào bốn giờ khác nhau.',ten:['Ngát','Khiêm','Liễu','Trung'],nhan:['Sớm nhất','Thứ 2','Thứ 3','Muộn nhất'],
    mm:[{t:'truoc',a:'Ngát',b:'Khiêm',chu:'Ngát đến sớm hơn Khiêm.'},{t:'truoc',a:'Khiêm',b:'Liễu',chu:'Liễu đến muộn hơn Khiêm.'},{t:'khong',a:'Trung',k:[1,4],chu:'Trung KHÔNG đến sớm nhất, cũng KHÔNG đến muộn nhất.'}],
@@ -1874,6 +2030,275 @@ if(docNeo().k==='giua-hai-ban') dhCheDo('D');
 
 
 
+const THU_CHU=['','nhất','hai','ba','tư','năm','sáu'];
+const SO_CHU=['','một','hai','ba','bốn','năm','sáu'];
+const HOA_GIAY={truc:'Số bông hoa', dv:'bông', nhom:'tổ', cum:{nhieu:'tổ gấp nhiều nhất', it:'tổ gấp ít nhất'},
+  xep:{nhieu:'từ gấp nhiều nhất đến gấp ít nhất', it:'từ gấp ít nhất đến gấp nhiều nhất'}};
+const DE_BC=[
+  {...HOA_GIAY, nut:'Hoa giấy · Tổ 3 tính từ ít nhất', mo:'Biểu đồ cột cho biết số bông hoa giấy bốn tổ gấp được.',
+   cot:[['Tổ 1',27],['Tổ 2',35],['Tổ 3',31],['Tổ 4',18]], chieu:'nhieu', hoi:{loai:'thu',ten:'Tổ 3',tu:'it'}},
+  {...HOA_GIAY, nut:'Hoa giấy · xếp từ ít đến nhiều', mo:'Su đổi chiều xếp: xếp bốn tổ từ gấp ít nhất đến gấp nhiều nhất.',
+   cot:[['Tổ 1',27],['Tổ 2',35],['Tổ 3',31],['Tổ 4',18]], chieu:'it', hoi:{loai:'ai',k:1,tu:'it',chu:'Tổ nào đứng đầu hàng?'}},
+  {...HOA_GIAY, nut:'Tổ 1 gấp 33 bông', mo:'Su đổi số bông hoa: Tổ 1 gấp được 33 bông.',
+   cot:[['Tổ 1',33],['Tổ 2',35],['Tổ 3',31],['Tổ 4',18]], chieu:'nhieu', hoi:{loai:'thu',ten:'Tổ 1',tu:'nhieu'}},
+  {...HOA_GIAY, nut:'Tổ 1 và Tổ 3 cùng 31 bông', mo:'Su đổi: Tổ 1 và Tổ 3 cùng gấp được 31 bông.',
+   cot:[['Tổ 1',31],['Tổ 2',35],['Tổ 3',31],['Tổ 4',18]], chieu:'nhieu', hoi:{loai:'ai',k:2,tu:'nhieu',chu:'Tính từ tổ gấp nhiều nhất, tổ nào đứng thứ hai?'}},
+  {nut:'Sách thư viện · Lớp 3A', mo:'Biểu đồ cột cho biết số quyển sách bốn lớp quyên góp cho thư viện.', truc:'Số quyển sách', dv:'quyển', nhom:'lớp',
+   cum:{nhieu:'lớp quyên góp nhiều nhất', it:'lớp quyên góp ít nhất'}, xep:{nhieu:'từ quyên góp nhiều nhất đến ít nhất', it:'từ quyên góp ít nhất đến nhiều nhất'},
+   cot:[['Lớp 3A',44],['Lớp 3B',51],['Lớp 3C',48],['Lớp 3D',39]], chieu:'nhieu', hoi:{loai:'thu',ten:'Lớp 3A',tu:'nhieu'}},
+  {nut:'Truyện nhà Bin · năm người', mo:'Biểu đồ cột cho biết số cuốn truyện của năm người trong nhà Bin.', truc:'Số cuốn truyện', dv:'cuốn', nhom:'người',
+   cum:{nhieu:'người nhiều truyện nhất', it:'người ít truyện nhất'}, xep:{nhieu:'từ nhiều truyện nhất đến ít nhất', it:'từ ít truyện nhất đến nhiều nhất'},
+   cot:[['Ông',8],['Bà',15],['Bố',11],['Mẹ',19],['Bin',13]], chieu:'it', hoi:{loai:'thu',ten:'Bố',tu:'nhieu'}}
+];
+
+function bcGiai(cot,hoi){
+  const cac=hoanVi(cot.map((_,i)=>i)).filter(p=>p.every((x,j)=>j===0||cot[p[j-1]][1]>=cot[x][1]));
+  const tu=p=>hoi.tu==='nhieu'?p:p.slice().reverse();
+  const moi=cac.map(p=>{ const q=tu(p); return hoi.loai==='thu'?String(q.findIndex(x=>cot[x][0]===hoi.ten)+1):cot[q[hoi.k-1]][0]; });
+  const kq=[...new Set(moi)];
+  return {cac:cac.map(p=>p.map(x=>cot[x][0])), dap:kq.length===1?kq[0]:'chua', cacDap:kq};
+}
+function bcHangDung(hang,cot,chieu){ const v=t=>cot.find(c=>c[0]===t)[1];
+  return hang.every((t,j)=>j===0||(chieu==='nhieu'?v(hang[j-1])>=v(t):v(hang[j-1])<=v(t))); }
+const bc={i:0,d:null,hang:[],chon:null,tl:null,goi:0,gh:{goi:0}};
+function bcCopy(i){ const d=DE_BC[i]; return {...d, cot:d.cot.map(c=>c.slice()), hoi:{...d.hoi}}; }
+function bcV(t){ return bc.d.cot.find(c=>c[0]===t)[1]; }
+function bcHoi(d){ const h=d.hoi; return h.chu||(h.loai==='thu'?`Tính từ ${d.cum[h.tu]}, ${h.ten} đứng thứ mấy?`:`Tính từ ${d.cum[h.tu]}, ${d.nhom} nào đứng thứ ${THU_CHU[h.k]}?`); }
+function bcNhanTL(v){ return v==='chua'?'Đề chưa cho đủ để biết':(bc.d.hoi.loai==='thu'?'Thứ '+v:v); }
+function bcSVG(){
+  const d=bc.d, n=d.cot.length, mx=Math.max(10,...d.cot.map(c=>c[1])), buoc=mx>40?20:(mx>20?10:5), tran=Math.ceil(mx/buoc)*buoc;
+  const W=460, H=260, x0=58, x1=W-8, y0=H-40, y1=30, k=(y0-y1)/tran, o=(x1-x0)/n; let s='';
+  for(let v=0;v<=tran;v+=buoc){ const y=y0-v*k; if(v) s+=`<line class="bc-ke" x1="${x0}" y1="${y}" x2="${x1}" y2="${y}"/>`;
+    s+=`<text class="bc-so-truc" x="${x0-8}" y="${y+6}" text-anchor="end">${v}</text>`; }
+  d.cot.forEach(([t,v],i)=>{ const cx=x0+o*(i+.5), y=y0-v*k, w=Math.min(64,o*.52);
+    const cls=['bc-cot', bc.chon===t?'chon':'', bc.hang.includes(t)?'da':''].join(' ');
+    s+=`<g class="${cls}" data-t="${t}" tabindex="0" role="button" aria-label="${t}: ${v} ${d.dv}">`
+      +`<rect class="bc-nen" x="${cx-o/2+3}" y="${y1-24}" width="${o-6}" height="${H-y1+20}" rx="10"/>`
+      +`<rect class="bc-than" x="${cx-w/2}" y="${y}" width="${w}" height="${Math.max(0,y0-y)}"/>`
+      +`<text class="bc-so" x="${cx}" y="${y-7}" text-anchor="middle">${v}</text>`
+      +`<text class="bc-ten" x="${cx}" y="${y0+26}" text-anchor="middle">${t}</text></g>`; });
+  s+=`<line class="bc-truc" x1="${x0}" y1="${y1-14}" x2="${x0}" y2="${y0}"/><line class="bc-truc" x1="${x0}" y1="${y0}" x2="${x1}" y2="${y0}"/>`;
+  s+=`<text class="bc-ten-truc" transform="translate(16,${(y0+y1)/2}) rotate(-90)" text-anchor="middle">${d.truc}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Biểu đồ cột: ${d.truc.toLowerCase()}">${s}</svg>`;
+}
+function veBC(){
+  const d=bc.d, n=d.cot.length;
+  $('#bc-mo').textContent=d.mo;
+  $('#bc-hinh').innerHTML=bcSVG();
+  $$('#bc-hinh .bc-cot').forEach(g=>{ const f=()=>bcChonThe(g.dataset.t); g.addEventListener('click',f); g.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); f(); } }); });
+  const con=d.cot.map(c=>c[0]).filter(t=>!bc.hang.includes(t));
+  $('#bc-the').innerHTML=con.length?con.map(t=>`<button class="the" draggable="true" aria-pressed="${bc.chon===t}" data-t="${t}">${t}</button>`).join(''):'<span class="nho">Đã xếp hết các cột vào hàng.</span>';
+  $$('#bc-the .the').forEach(b=>{ b.addEventListener('click',()=>bcChonThe(b.dataset.t));
+    b.addEventListener('dragstart',e=>{ try{ e.dataTransfer.setData('text/plain',b.dataset.t); e.dataTransfer.effectAllowed='move'; }catch(x){} bc.chon=b.dataset.t; }); });
+  $('#bc-xep').textContent=`Xếp ${SO_CHU[n]} ${d.nhom} ${d.xep[d.chieu]}:`;
+  $('#bc-dau').textContent='Đầu hàng · '+(d.chieu==='nhieu'?'nhiều nhất':'ít nhất'); $('#bc-cuoi').textContent='Cuối hàng · '+(d.chieu==='nhieu'?'ít nhất':'nhiều nhất');
+  $('#bc-hang').innerHTML=bc.hang.map((t,i)=>`<div class="o ${t?'co':''}" tabindex="0" role="button" data-i="${i}" aria-label="Ô ${i+1}${t?': '+t:''}"><span class="so-o">${i+1}</span><span class="ten-o">${t||''}</span><span class="gia-o">${t?bcV(t)+' '+d.dv:''}</span><span class="bc-dem"></span></div>`).join('');
+  $$('#bc-hang .o').forEach(o=>{ const i=+o.dataset.i, f=()=>bcDat(i);
+    o.addEventListener('click',f); o.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); f(); } });
+    o.addEventListener('dragover',e=>{ e.preventDefault(); o.classList.add('keo-vao'); }); o.addEventListener('dragleave',()=>o.classList.remove('keo-vao'));
+    o.addEventListener('drop',e=>{ e.preventDefault(); o.classList.remove('keo-vao'); let t=''; try{ t=e.dataTransfer.getData('text/plain'); }catch(x){} if(t) bc.chon=t; bcDat(i); }); });
+}
+function bcChonThe(t){ if(bc.hang.includes(t)) return; bc.chon=bc.chon===t?null:t; veBC(); }
+function bcDat(i){
+  if(bc.chon){ const j=bc.hang.indexOf(bc.chon); if(j>=0) bc.hang[j]=null; bc.hang[i]=bc.chon; bc.chon=null; }
+  else if(bc.hang[i]) bc.hang[i]=null;
+  veBC();
+}
+function bcVeChon(){
+  const d=bc.d, ds=d.hoi.loai==='thu'?d.cot.map((_,i)=>String(i+1)):d.cot.map(c=>c[0]);
+  $('#bc-hoi').innerHTML=`<b>${bcHoi(d)}</b>`;
+  $('#bc-chon').innerHTML=[...ds,'chua'].map(v=>`<button class="the" type="button" data-v="${v}" aria-pressed="false">${bcNhanTL(v)}</button>`).join('');
+  $$('#bc-chon .the').forEach(b=>b.addEventListener('click',()=>{ bc.tl=b.dataset.v; chonMot('#bc-chon .the',b); $$('#bc-chon .the').forEach(x=>x.classList.remove('dung','sai'));
+    $('#ket-bc').innerHTML=`Con chọn: <b>${bcNhanTL(bc.tl)}</b>. Con bấm “Kiểm tra”.`; }));
+}
+function bcNap(i,giu){
+  bc.i=i; if(!giu) bc.d=bcCopy(i);
+  bc.hang=Array(bc.d.cot.length).fill(null); bc.chon=null; bc.tl=null; bc.goi=0; bc.goiChon=null; bc.gh={goi:0};
+  $$('#bc-chieu button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.c===bc.d.chieu));
+  $('#bc-nhap').innerHTML=bc.d.cot.map(([t,v],j)=>`<label>${t} <input class="so" data-j="${j}" value="${v}" inputmode="numeric" maxlength="2" aria-label="Số ${bc.d.dv} của ${t}"></label>`).join('');
+  $$('#bc-nhap input').forEach(e=>{ chiSo(e); e.addEventListener('change',()=>{ bc.d.cot[+e.dataset.j][1]=kep(e,0,99,bc.d.cot[+e.dataset.j][1]); bcNap(bc.i,true); }); });
+  veBC(); bcVeChon(); $('#bc-cotloi').hidden=true;
+  $('#ket-bc').innerHTML='Con đọc số trên đầu mỗi cột, xếp các cột thành hàng, rồi chọn một ô và bấm “Kiểm tra”.';
+}
+$('#bc-de').innerHTML=DE_BC.map((d,i)=>`<button class="the" data-i="${i}" aria-pressed="${i===0}">${d.nut}</button>`).join('');
+$$('#bc-de .the').forEach(b=>b.addEventListener('click',()=>{ chonMot('#bc-de .the',b); bcNap(+b.dataset.i); }));
+$$('#bc-chieu button').forEach(b=>b.addEventListener('click',()=>{ bc.d.chieu=b.dataset.c; bcNap(bc.i,true); }));
+$('#bc-xoa').addEventListener('click',()=>{ bc.hang=bc.hang.map(()=>null); bc.chon=null; bc.gh={goi:0}; veBC(); });
+$('#bc-lai').addEventListener('click',()=>bcNap(bc.i,true));
+function bcChuoi(h){ return h.map((t,j)=>(j?(bcV(h[j-1])>bcV(t)?' &gt; ':(bcV(h[j-1])<bcV(t)?' &lt; ':' = ')):'')+bcV(t)).join(''); }
+function bcKe(h){ return h.map(t=>`${t} (${bcV(t)})`).join(', '); }
+function bcTheoChieu(hang){ return bc.d.chieu==='nhieu'?hang:hang.slice().reverse(); }
+function bcDanhDem(hang,den){
+  const d=bc.d, n=hang.length, tuDau=(d.hoi.tu==='nhieu')===(d.chieu==='nhieu');
+  $$('#bc-hang .o').forEach((o,i)=>{ const so=tuDau?i+1:n-i, e=o.querySelector('.bc-dem'); e.classList.toggle('lam',!tuDau);
+    if(so<=den){ e.textContent=so; o.classList.add('dem-o'); } });
+}
+$('#bc-kiem-hang').addEventListener('click',()=>{
+  const d=bc.d, h=bc.hang, n=h.length;
+  if(h.some(t=>!t)){ $('#ket-bc').innerHTML=`Con đặt đủ ${n} cột vào hàng, rồi bấm “Kiểm hàng”.`; return; }
+  $$('#bc-hang .o').forEach(o=>o.classList.remove('dung-o','sai-o','dem-o'));
+  const ok=bcHangDung(h,d.cot,d.chieu), cacH=bcGiai(d.cot,{loai:'thu',ten:d.cot[0][0],tu:'nhieu'}).cac.map(bcTheoChieu);
+  const bang=cacH.length>1?` Có ${cacH.length} hàng đúng: các ${d.nhom} có cùng số ${d.dv} đổi chỗ cho nhau thì hàng vẫn đúng.`:'';
+  if(ok){ bc.gh={goi:0}; $$('#bc-hang .o').forEach(o=>o.classList.add('dung-o'));
+    $('#ket-bc').innerHTML=DUNG+`Hàng của con xếp ${d.xep[d.chieu]}: ${bcChuoi(h)}.${bang}`; return; }
+  const lon=d.chieu==='nhieu', i=h.findIndex((t,j)=>h.slice(j+1).some(u=>lon?bcV(u)>bcV(t):bcV(u)<bcV(t)));
+  if(canGoi(bc.gh,h.join('|'))){
+    $('#ket-bc').innerHTML=(bc.gh.goi===2?CHUA_DOI:'')+`Hàng của con: máy chưa đồng ý. Ô ${i+1}: con đặt ${h[i]} (${bcV(h[i])} ${d.dv}). Phía sau ô ấy còn cột có số ${lon?'lớn':'bé'} hơn ${bcV(h[i])} không?<br>Con đổi chỗ, rồi bấm “Kiểm hàng” lần nữa.`;
+    return; }
+  bc.gh={goi:0};
+  const dung=cacH[0];
+  $('#ket-bc').innerHTML=`Hàng của con chưa xếp ${d.xep[d.chieu]}: ô ${i+1} có ${h[i]} (${bcV(h[i])} ${d.dv}), mà phía sau còn cột có số ${lon?'lớn':'bé'} hơn. Máy xếp lại: <b>${bcKe(dung)}</b> · ${bcChuoi(dung)}.${bang}`;
+  bc.hang=dung.slice(); veBC(); $$('#bc-hang .o').forEach(o=>o.classList.add('dung-o'));
+});
+function bcGoi(g,r){
+  const d=bc.d, h=d.hoi, n=d.cot.length, cum=d.cum[h.tu], nguoc=d.cum[h.tu==='nhieu'?'it':'nhieu'];
+  if(r.dap==='chua') return `Có hai cột nào cùng số ${d.dv}, đổi chỗ cho nhau được không?`;
+  if(g==='chua') return `Có hai cột nào cùng số ${d.dv} không?`;
+  const nguocDap=h.loai==='thu'?String(n-(+r.dap)+1):bcGiai(d.cot,{...h,tu:h.tu==='nhieu'?'it':'nhieu'}).dap;
+  const gan=h.loai==='thu'&&Math.abs(+g-(+r.dap))===1;
+  if(g===nguocDap&&gan) return `Con có đếm từ ${nguoc}, hay bỏ sót một cột không?`;
+  if(g===nguocDap) return `Con có đếm từ ${nguoc} không?`;
+  return `Đếm từ ${cum}, con có bỏ sót cột nào không?`;
+}
+$('#bc-kiem').addEventListener('click',()=>{
+  const d=bc.d, h=d.hoi, r=bcGiai(d.cot,h);
+  if(bc.tl===null){ $('#ket-bc').innerHTML='Con chọn một ô ở trên trước nhé.'; return; }
+  if(bc.tl!==r.dap&&canGoi(bc,bc.tl)){
+    $('#ket-bc').innerHTML=(bc.goi===2?CHUA_DOI:'')+`Con chọn “${bcNhanTL(bc.tl)}”: máy chưa đồng ý. ${bcGoi(bc.tl,r)}<br>Con nghĩ lại, chọn lại một ô, rồi bấm “Kiểm tra” lần nữa.`;
+    return; }
+  bc.goi=0;
+  $$('#bc-chon .the').forEach(x=>{ x.classList.toggle('dung',x.dataset.v===r.dap); x.classList.toggle('sai',x.dataset.v===bc.tl&&bc.tl!==r.dap); });
+  const mo=bc.tl===r.dap?DUNG:`Con chọn “${bcNhanTL(bc.tl)}”. Máy kết luận khác. `;
+  const tuH=p=>h.tu==='nhieu'?p:p.slice().reverse(), cum=d.cum[h.tu];
+  let ly;
+  if(r.dap!=='chua'){
+    const q=tuH(r.cac[0]), den=h.loai==='thu'?q.indexOf(h.ten)+1:h.k;
+    ly=`Đếm từ ${cum}: ${bcKe(q.slice(0,den))}. Vậy ${h.loai==='thu'?`${h.ten} đứng thứ ${den}`:`${d.nhom} đứng thứ ${THU_CHU[den]} là ${q[den-1]}`}.`;
+    if(bc.hang.some(t=>!t)||!bcHangDung(bc.hang,d.cot,d.chieu)){ bc.hang=bcTheoChieu(r.cac[0]).slice(); veBC(); }
+    bcDanhDem(bc.hang,den);
+  } else {
+    const hai=r.cac.filter((p,j)=>{ const q=tuH(p), a=h.loai==='thu'?String(q.indexOf(h.ten)+1):q[h.k-1]; return r.cac.findIndex(p2=>{ const q2=tuH(p2); return (h.loai==='thu'?String(q2.indexOf(h.ten)+1):q2[h.k-1])===a; })===j; }).slice(0,2);
+    const noi=p=>{ const q=tuH(p); return h.loai==='thu'?`${h.ten} đứng thứ ${q.indexOf(h.ten)+1}`:`thứ ${THU_CHU[h.k]} là ${q[h.k-1]}`; };
+    const bang=d.cot.filter(c=>d.cot.some(e=>e!==c&&e[1]===c[1]));
+    ly=`${bang.map(c=>c[0]).join(' và ')} cùng ${bang[0][1]} ${d.dv}: đổi chỗ cho nhau thì hàng vẫn đúng. `
+      +hai.map(p=>`Hàng ${bcTheoChieu(p).join(', ')}: ${noi(p)}.`).join(' ')+` Vậy: <b>Đề chưa cho đủ để biết</b>.`;
+  }
+  $('#ket-bc').innerHTML=mo+ly; $('#bc-cotloi').hidden=false;
+});
+bcNap(0);
+
+
+
+const DE_MM=[
+  {nut:'Xuân, Yên, Tâm', mo:'Con chọn manh mối cho hàng này:', ban:['Xuân','Yên','Tâm'], san:[], khac:'Xuân cao hơn Tâm.',
+   hoi:'Cần ít nhất mấy manh mối?'},
+  {nut:'Thêm Uyên · hai manh mối của Na', mo:'Su thêm Uyên, giữ hai manh mối của Na:', ban:['Xuân','Yên','Tâm','Uyên'], cua:'Na',
+   san:[{t:'thu',a:'Xuân',k:1},{t:'ngay',a:'Yên',b:'Tâm'}], hoi:'Cần thêm ít nhất mấy manh mối?'},
+  {nut:'Lực viết hai manh mối', mo:'Lực đã viết hai manh mối cho hàng này:', ban:['Phượng','Quân','Sang','Thư'], cua:'Lực',
+   san:[{t:'thu',a:'Phượng',k:1},{t:'truoc',a:'Sang',b:'Thư'}], hoi:'Lực cần thêm ít nhất mấy manh mối?'},
+  {nut:'Bốn bạn · viết từ đầu', mo:'Con chọn manh mối từ đầu cho hàng này:', ban:['Xuân','Yên','Tâm','Uyên'], san:[],
+   hoi:'Cần ít nhất mấy manh mối?'}
+];
+const NHOM_MM=[['cho','Đứng ở'],['ngay','Đứng ngay trước'],['truoc','Đứng trước'],['khong','KHÔNG đứng'],['khac','Manh mối khác']];
+function mmChu(m,n){
+  if(m.t==='thu') return `${m.a} đứng ${m.k===1?'đầu hàng':(m.k===n?'cuối hàng':'thứ '+THU_CHU[m.k])}.`;
+  if(m.t==='khong') return `${m.a} KHÔNG đứng ${m.k===1?'đầu hàng':'cuối hàng'}.`;
+  if(m.t==='ngay') return `${m.a} đứng ngay trước ${m.b}.`;
+  if(m.t==='truoc') return `${m.a} đứng trước ${m.b}.`;
+  return m.chu;
+}
+function mmMenu(d,R){ const n=R.length, M=[];
+  R.forEach((a,k)=>M.push({t:'thu',a,k:k+1,nhom:'cho'}));
+  for(let i=0;i<n-1;i++) M.push({t:'ngay',a:R[i],b:R[i+1],nhom:'ngay'});
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++) M.push({t:'truoc',a:R[i],b:R[j],nhom:'truoc'});
+  for(let i=1;i<n;i++) M.push({t:'khong',a:R[i],k:1,nhom:'khong'});
+  for(let i=0;i<n-1;i++) M.push({t:'khong',a:R[i],k:n,nhom:'khong'});
+  if(d.khac) M.push({t:'khac',chu:d.khac,nhom:'khac'});
+  M.forEach(m=>m.chu=mmChu(m,n)); return M;
+}
+const mmDung=(m,p)=>m.t==='khac'||xet(m,p)==='dung';
+function mmCach(ban,ms){ return hoanVi(ban).filter(p=>ms.every(m=>mmDung(m,p))); }
+function toHop(a,r){ if(!r) return [[]]; const o=[]; a.forEach((x,i)=>toHop(a.slice(i+1),r-1).forEach(t=>o.push([x,...t]))); return o; }
+
+function mmItNhat(d,R){ const san=d.san.map(m=>({...m,chu:mmChu(m,R.length)})), M=mmMenu(d,R).filter(m=>!san.some(s=>s.chu===m.chu)), k=R.join('|');
+  for(let r=0;r<=R.length;r++){ const bo=toHop(M,r).find(s=>{ const c=mmCach(d.ban,[...san,...s]); return c.length===1&&c[0].join('|')===k; }); if(bo) return {m:r, vd:bo}; }
+  return {m:null, vd:[]}; }
+const mm={i:0,R:null,chon:[],goi:0,xem:false};
+function mmSan(){ const d=DE_MM[mm.i]; return d.san.map(m=>({...m,chu:mmChu(m,mm.R.length)})); }
+function mmNap(i,R){
+  mm.i=i; const d=DE_MM[i]; mm.R=R||d.ban.slice(); mm.chon=[]; mm.goi=0; mm.goiChon=null; mm.xem=false;
+  $('#mm-mo').textContent=d.mo; $('#mm-hoi').textContent=d.hoi; $('#mm-doan').value='';
+  $('#mm-doi-hang').disabled=d.san.length>0; $('#mm-doi-hang').title=d.san.length?'Đề này giữ manh mối có sẵn nên giữ hàng':'Đổi thứ tự các bạn trong hàng của con';
+  $('#mm-dich').innerHTML=`<span class="mm-nhan">${d.cua?'Hàng cần xếp':'Hàng của con'}:</span>`+mm.R.map((t,j)=>(j?'<span class="mm-mui">→</span>':'')+`<span class="mm-o">${t}</span>`).join('');
+  const san=mmSan(), M=mmMenu(d,mm.R);
+
+  const nhomMM=[...NHOM_MM.filter(([k])=>k!=='khong').slice(0,3), ['khong1','KHÔNG ở đầu hàng'], ['khongn','KHÔNG ở cuối hàng'], ['khac','Manh mối khác']];
+  const thuoc=(m,k)=>m.nhom===k||(m.nhom==='khong'&&k===(m.k===1?'khong1':'khongn'));
+  $('#mm-menu').innerHTML=nhomMM.filter(([k])=>M.some(m=>thuoc(m,k))).map(([k,ten])=>`<div class="mm-nhom"><span class="mm-nhan">${ten}:</span>`
+    +M.map((m,j)=>!thuoc(m,k)?'':`<button class="the" type="button" data-j="${j}" aria-label="${m.chu}" aria-pressed="${san.some(s=>s.chu===m.chu)}"${san.some(s=>s.chu===m.chu)?' disabled':''}>${m.nhom==='khong'?m.a:(m.t==='khac'?m.chu:m.chu.replace(' đứng ',' ')).replace(/\.$/,'')}</button>`).join('')+'</div>').join('');
+  mm.M=M;
+  $$('#mm-menu .the').forEach(b=>b.addEventListener('click',()=>{ const m=M[+b.dataset.j], j=mm.chon.indexOf(m); if(j>=0) mm.chon.splice(j,1); else mm.chon.push(m); veMM(); }));
+  $('#mm-cotloi').hidden=true; $('#mm-xem').setAttribute('aria-expanded','false');
+  veMM();
+  $('#ket-mm').innerHTML='Con chọn manh mối và xem máy đếm số cách. Con viết số manh mối ít nhất vào ô, rồi bấm “Kiểm tra”.';
+}
+function mmTag(c){ return `<span class="tt ${c===1?'dung':(c===0?'sai':'cho')} con">còn ${c} cách</span>`; }
+function veMM(){
+  const d=DE_MM[mm.i], san=mmSan(), n=mm.R.length, tong=mmCach(d.ban,[]).length;
+  $$('#mm-menu .the').forEach(b=>{ if(!b.disabled) b.setAttribute('aria-pressed',mm.chon.includes(mm.M[+b.dataset.j])); });
+  $('#mm-goc').textContent=`Chưa có manh mối: ${SO_CHU[n]} bạn xếp được ${tong} cách.`; $('#mm-goc').classList.toggle('co-mm',san.length+mm.chon.length>0);
+  const ds=[...san.map(m=>({m,san:true})),...mm.chon.map(m=>({m,san:false}))];
+  $('#mm-bo').innerHTML=ds.length?ds.map((x,j)=>{ const c=mmCach(d.ban,ds.slice(0,j+1).map(y=>y.m)).length;
+      return `<li${x.san?' title="Manh mối có sẵn của '+d.cua+'"':` role="button" tabindex="0" data-j="${j-san.length}" title="Chạm để bỏ manh mối này"`}><span class="tt cho">${x.san?d.cua:j-san.length+1}</span><span>${x.m.chu}</span>${mmTag(c)}</li>`; }).join('')
+    :'<li><span>Con chưa chọn manh mối nào.</span></li>';
+  $$('#mm-bo li[role="button"]').forEach(li=>{ const f=()=>{ mm.chon.splice(+li.dataset.j,1); veMM(); }; li.addEventListener('click',f); li.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); f(); } }); });
+  const c=mmCach(d.ban,ds.map(x=>x.m)), k=mm.R.join('|');
+  $('#mm-cach').hidden=!mm.xem;
+  $('#mm-cach').innerHTML=c.length?c.map(p=>`<span class="${p.join('|')===k?'dich':''}">${p.join(' – ')}</span>`).join(''):'<span>Không còn cách nào.</span>';
+  $('#mm-xem').textContent=mm.xem?'Ẩn các cách còn lại':`Xem các cách còn lại (${c.length})`;
+}
+$('#mm-de').innerHTML=DE_MM.map((d,i)=>`<button class="the" data-i="${i}" aria-pressed="${i===0}">${d.nut}</button>`).join('');
+$$('#mm-de .the').forEach(b=>b.addEventListener('click',()=>{ chonMot('#mm-de .the',b); mmNap(+b.dataset.i); }));
+$('#mm-xem').addEventListener('click',()=>{ mm.xem=!mm.xem; $('#mm-xem').setAttribute('aria-expanded',mm.xem); veMM(); });
+$('#mm-lai').addEventListener('click',()=>mmNap(mm.i,mm.R));
+$('#mm-doi-hang').addEventListener('click',()=>{ const d=DE_MM[mm.i]; if(d.san.length) return;
+  const P=hoanVi(d.ban), j=P.findIndex(p=>p.join('|')===mm.R.join('|')); mmNap(mm.i,P[(j+1)%P.length]); });
+chiSo($('#mm-doan'));
+$('#mm-doan').addEventListener('keydown',e=>{ if(e.key==='Enter') $('#mm-kiem').click(); });
+function mmBoChu(bo){ return bo.map(m=>`“${m.chu.replace(/\.$/,'')}”`).join(' và '); }
+$('#mm-kiem').addEventListener('click',()=>{
+  const d=DE_MM[mm.i], g=docSoNguyen($('#mm-doan')), san=mmSan(), r=mmItNhat(d,mm.R), them=d.san.length?` (cùng hai manh mối của ${d.cua})`:'';
+  if(g===null){ $('#ket-mm').innerHTML='Con viết số manh mối ít nhất vào ô trước nhé.'; return; }
+  const ms=[...san,...mm.chon], c=mmCach(d.ban,ms), k=mm.R.join('|'), mot=c.length===1&&c[0].join('|')===k;
+  if(g!==r.m&&canGoi(mm,g)){
+
+    const q=g<r.m?(g===0?`Chưa thêm manh mối nào thì còn mấy cách?`:`Con thử vài bộ ${g} manh mối${them}: có bộ nào chỉ còn 1 cách không?`)
+      :`Có bộ ít hơn ${g} manh mối${them} mà chỉ còn 1 cách không?`;
+    $('#ket-mm').innerHTML=(mm.goi===2?CHUA_DOI:'')+`Con đoán ${g} manh mối: máy chưa đồng ý. ${q}<br>Con nghĩ lại, viết lại số, rồi bấm “Kiểm tra” lần nữa.`;
+    return; }
+  mm.goi=0;
+  const mo=g===r.m?DUNG:`Con đoán ${g}. Máy kết luận khác. `;
+  const truoc=r.m===0?'':(r.m===1?`Chưa thêm manh mối thì còn ${mmCach(d.ban,san).length} cách.`
+      :(r.m===2?'Máy thử từng manh mối một'+them+': luôn còn ít nhất 2 cách.':`Máy thử mọi bộ ${r.m-1} manh mối${them}: luôn còn ít nhất 2 cách.`));
+  const vd=(mot&&mm.chon.length===r.m)?mm.chon:r.vd;
+  let ly=`${truoc} ${r.m===1?'Thêm':'Bộ'} ${mmBoChu(vd)}: còn 1 cách. Vậy cần ${d.san.length?'thêm ':''}ít nhất <b>${r.m} manh mối</b>.`;
+  ly+='<br>';
+  if(mot&&mm.chon.length===r.m) ly+=`Bộ của con chỉ để lại đúng hàng của con, với ${r.m} manh mối.`;
+  else if(mot){ const bo=mm.chon.find(m=>{ const c2=mmCach(d.ban,ms.filter(x=>x!==m)); return c2.length===1; });
+    ly+=bo?`Bộ của con: bỏ “${bo.chu.replace(/\.$/,'')}” đi vẫn còn 1 cách.`:'Bộ của con chỉ để lại hàng của con.'; }
+  else if(!mm.chon.length) ly+=`Bây giờ con chọn ${d.san.length?'thêm ':''}${r.m} manh mối cho hàng ${d.san.length?'này':'của con'}.`;
+  else ly+=`Bộ của con còn ${c.length} cách. Con chọn thêm manh mối để chỉ còn 1 cách.`;
+  $('#ket-mm').innerHTML=mo+ly; $('#mm-cotloi').hidden=false;
+});
+mmNap(0);
+Tram1.bieuDo=i=>bcGiai(DE_BC[i].cot,DE_BC[i].hoi); Tram1.bcGiai=bcGiai; Tram1.bcHangDung=bcHangDung;
+Tram1.manhMoi=(i,R)=>{ const d=DE_MM[i]; R=R||d.ban; const san=d.san.map(m=>({...m,chu:mmChu(m,R.length)})), r=mmItNhat(d,R);
+  return {R, tong:mmCach(d.ban,san).length, menu:mmMenu(d,R).map(m=>({chu:m.chu, nhom:m.nhom, con:mmCach(d.ban,[...san,m]).length})), min:r.m, vd:r.vd.map(m=>m.chu), san:san.map(m=>m.chu)}; };
+Tram1.mmCach=(i,chu)=>{ const d=DE_MM[i], M=mmMenu(d,d.ban), san=d.san.map(m=>({...m,chu:mmChu(m,d.ban.length)})); return mmCach(d.ban,[...san,...chu.map(c=>M.find(m=>m.chu===c))]).length; };
+Tram1.de.bieuDo=DE_BC; Tram1.de.manhMoi=DE_MM;
+
+
+
 const KET_CHIEU=[['#ket-ss','#ss-nut'],['#ket-bb','#bb-len'],['#ket-xh','#xh-nut'],['#ket-bd','#bd-kiem']];
 const choCu={};
 function dangChieu(){ return document.documentElement.hasAttribute('data-chieu'); }
@@ -1899,7 +2324,9 @@ const COT_CHIEU={
   'bang-do':{tren:['#bd-de'], phai:null},
   'hai-phia':{tren:['#hp-de'], phai:null},
   'cau-noi':{tren:['#cn-de'], phai:['#cn-khung-dong','#cn-hinh','#cn-cotloi'], trai:'1.2fr'},
-  'ai-noi-dung':{tren:['#an-de'], phai:['#an-loi-ay','#an-dan','#an-chon','#an-bc-nhan','#an-bc','#an-nut','#ket-an','#an-cotloi'], trai:'1fr'}
+  'ai-noi-dung':{tren:['#an-de'], phai:['#an-loi-ay','#an-dan','#an-chon','#an-bc-nhan','#an-bc','#an-nut','#ket-an','#an-cotloi'], trai:'1fr'},
+  'bieu-do':{tren:['#bc-de'], phai:null},
+  'bo-manh-moi':{tren:['#mm-de'], phai:null}
 };
 const daDoi=[];
 function doi(e,cha,truoc){ daDoi.push([e,e.parentNode,e.nextSibling]); cha.insertBefore(e,truoc||null); }
@@ -1924,6 +2351,10 @@ function canCot(){
     s.querySelectorAll('.cot-loi').forEach(c=>{ if(c.hidden) return;
       const cao=e=>[...e.children].filter(x=>x!==c).reduce((h,x)=>h+x.getBoundingClientRect().height,0);
       const vao=cao(t)<=cao(p)?t:p; if(c.parentNode!==vao) doi(c,vao); }); });
+  $$('.bc-luoi,.mm-luoi').forEach(g=>{ if(g.closest('section').hidden) return; const [t,p]=g.children;
+    g.querySelectorAll('.cot-loi').forEach(c=>{ if(c.hidden) return;
+      const cao=e=>[...e.children].filter(x=>x!==c).reduce((h,x)=>h+x.getBoundingClientRect().height,0);
+      const vao=cao(t)<=cao(p)?t:p; if(c.parentNode!==vao) doi(c,vao); }); });
 }
 document.addEventListener('click',()=>{ setTimeout(canCot,30); setTimeout(canCot,1400); });
 
@@ -1931,7 +2362,7 @@ function cuonDai(){ if(!dangChieu()) return; $$('.dau-chieu .bo-de').forEach(d=>
   const l=b.offsetLeft-d.offsetLeft, r=l+b.offsetWidth; if(l<d.scrollLeft||r>d.scrollLeft+d.clientWidth) d.scrollLeft=Math.max(0,l-8); }); }
 document.addEventListener('click',()=>setTimeout(cuonDai,20));
 
-const CO_GIAN='.cach-ds,#dh-vso,.ds-nhom,#bt-mm-soan';
+const CO_GIAN='.cach-ds,#dh-vso,.ds-nhom,#bt-mm-soan,#mm-cach';
 function coLai(s){
   const du=s.getBoundingClientRect().bottom+scrollY-innerHeight+4; if(du<=0) return;
   const z=parseFloat(getComputedStyle($('.khung')).zoom)||1;
@@ -1955,7 +2386,7 @@ function vuaMan(){
 }
 document.addEventListener('click',()=>{ setTimeout(vuaMan,60); setTimeout(vuaMan,1500); });
 function datCai(on){ document.documentElement.toggleAttribute('data-cai',!!on); const b=$('#doi-de');
-  b.setAttribute('aria-pressed',!!on); b.textContent=on?'Xong, gập phần đổi đề':'Đổi đề'; }
+  b.setAttribute('aria-pressed',!!on); b.textContent=on?'Xong, gập phần đổi đề':'Đổi đề'; $$('details.cai').forEach(x=>{ x.open=!!on; }); }
 $('#doi-de').addEventListener('click',()=>datCai(!document.documentElement.hasAttribute('data-cai')));
 function ghiChieu(on){ try{ const u=new URL(location.href), n=docNeo();
   if(on) u.searchParams.set('chieu','1'); else u.searchParams.delete('chieu');
