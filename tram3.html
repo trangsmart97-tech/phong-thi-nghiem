@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23493568'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' font-weight='700' text-anchor='middle' fill='%23FBEFD5'%3ET%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phòng thí nghiệm Trạm 3</title>
+<style>
+
+@font-face { font-family: 'Tram O'; src: url(data:font/ttf;base64,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) format('truetype'); unicode-range: U+25A1, U+25B3, U+25CB, U+25C7; font-weight: 100 900; font-style: normal italic; }
+
+:root{
+  --nen:#FBFAFD; --mat:#FFFFFF; --chu:#26242E; --chu-phu:#55606F; --vien:#C9C2D6;
+  --tim:#493568; --tim-nhat:#EDE8F3; --lam:#526D91; --lam-nhat:#E7EDF5;
+  --la:#4D7766; --la-nhat:#E4EFE9; --vang:#D9A441; --vang-nhat:#FBEFD5; --vang-chu:#845F14;
+  --san:#D47761; --san-nhat:#F9E3DC; --san-chu:#A4472E; --dung:#276B4A; --sai:#A83E2A; --nut-chu:#FFFFFF;
+  --chu-to:"Tram O","Be Vietnam Pro","Segoe UI",Arial,sans-serif; --chu-tieude:"Tram O","Noto Serif",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --nen:#17151C; --mat:#211E28; --chu:#EEEAF4; --chu-phu:#B7B0C4; --vien:#4A4357;
+  --tim:#B9A6DA; --tim-nhat:#2D2639; --lam:#93ADD0; --lam-nhat:#232C39;
+  --la:#8FBFA9; --la-nhat:#1F2E28; --vang:#E6B85A; --vang-nhat:#3A2F18; --vang-chu:#F0CF85;
+  --san:#E59A86; --san-nhat:#3A231E; --san-chu:#F2B4A3; --dung:#6CC79A; --sai:#F0896F; --nut-chu:#17151C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --nen:#17151C; --mat:#211E28; --chu:#EEEAF4; --chu-phu:#B7B0C4; --vien:#4A4357;
+  --tim:#B9A6DA; --tim-nhat:#2D2639; --lam:#93ADD0; --lam-nhat:#232C39;
+  --la:#8FBFA9; --la-nhat:#1F2E28; --vang:#E6B85A; --vang-nhat:#3A2F18; --vang-chu:#F0CF85;
+  --san:#E59A86; --san-nhat:#3A231E; --san-chu:#F2B4A3; --dung:#6CC79A; --sai:#F0896F; --nut-chu:#17151C; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--nen);color:var(--chu);font-family:var(--chu-to);font-size:18px;line-height:1.45;margin:0}
+.khung{max-width:1180px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:12px}
+h1{font-family:var(--chu-tieude);color:var(--tim);font-size:clamp(24px,3.4vw,34px);margin:0;text-wrap:balance}
+.phu{color:var(--chu-phu);font-size:16px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+nav button,.the,.nut{font:inherit;font-weight:700;font-size:17px;border:2px solid var(--vien);background:var(--mat);color:var(--chu);border-radius:999px;padding:8px 16px;cursor:pointer}
+nav button[aria-selected="true"],.the[aria-pressed="true"]{background:var(--tim);border-color:var(--tim);color:var(--nen)}
+.nut.chinh{background:var(--lam);border-color:var(--lam);color:var(--nut-chu)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--vang);outline-offset:2px}
+[hidden]{display:none !important}
+.ban{background:var(--mat);border:1px solid var(--vien);border-radius:16px;padding:16px clamp(14px,2.4vw,26px)}
+.ban h2{font-family:var(--chu-tieude);font-size:clamp(20px,2.6vw,26px);margin:0 0 6px}
+.dan{color:var(--chu-phu);margin:0 0 12px;max-width:75ch}
+.bo-de{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.bo-de .the{font-size:16px;padding:6px 12px}
+.vung{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:760px){.vung{grid-template-columns:1fr}}
+table.phep{border-collapse:collapse;margin:4px auto;font-variant-numeric:tabular-nums}
+table.phep td{width:74px;height:58px;text-align:center;font-size:34px;font-weight:800}
+table.phep tr.ten td{height:28px;font-size:15px;color:var(--lam);font-weight:800;border-bottom:2px solid var(--lam)}
+table.phep tr.nho td{height:30px;font-size:17px;color:var(--lam);font-weight:800} table.phep tr.nho td.dau{font-size:15px}
+table.phep tr.kq td{border-top:4px solid var(--chu)}
+table.phep td.dau{width:44px}
+table.phep td.dang{background:var(--vang-nhat);border-radius:8px}
+input.o::placeholder{font-family:'Tram O',sans-serif;color:var(--lam);opacity:.45}
+input.o{width:52px;height:52px;font:inherit;font-size:30px;font-weight:800;text-align:center;color:var(--lam);border:3px dashed var(--lam);border-radius:10px;background:var(--lam-nhat)}
+input.o:disabled{opacity:.55}
+input.o.dung{border-style:solid;border-color:var(--dung);color:var(--dung);background:var(--la-nhat)}
+.hoi{background:var(--lam-nhat);border-radius:12px;padding:12px 14px;margin:0 0 12px}
+.hoi p{margin:0 0 8px;font-weight:700}
+.hang{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.phan-hoi{min-height:54px;border-left:5px solid var(--vien);padding:8px 12px;border-radius:6px;background:var(--nen)}
+.phan-hoi.tot{border-color:var(--dung)} .phan-hoi.chua{border-color:var(--sai)}
+.nhat-ky{font-size:15px;color:var(--chu-phu);margin:10px 0 0;padding-left:18px}
+input.o.dung:disabled{opacity:1}
+input.so{width:5ch;font:inherit;font-size:22px;font-weight:800;text-align:center;color:var(--lam);border:3px dashed var(--lam);border-radius:10px;background:var(--lam-nhat);padding:2px 4px}
+input.so.dung{border-style:solid;border-color:var(--dung);color:var(--dung);background:var(--la-nhat)}
+.nut[aria-pressed="true"]{background:var(--lam);border-color:var(--lam);color:var(--nut-chu)}
+.de-bai{font-size:19px;margin:0 0 10px;font-weight:600}
+.so-do{margin:6px 0 4px}
+.ngoac{display:flex;align-items:flex-end;gap:6px;justify-content:center;border:2px solid var(--lam);border-bottom:none;height:16px;margin:26px 0 0;position:relative}
+.ngoac .ca{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-weight:800;font-size:20px;white-space:nowrap}
+.thanh{display:flex;border:2px solid var(--lam);border-radius:4px;min-height:56px;background:var(--mat)}
+.phan{display:flex;align-items:center;justify-content:center;border-right:2px solid var(--lam);font-weight:800;font-size:22px;padding:4px;min-width:60px}
+.phan:last-child{border-right:none}
+.phan.chua{background:var(--lam-nhat)}
+.nhan-thanh{display:flex;font-size:15px;color:var(--chu-phu)} .nhan-thanh span{text-align:center}
+.so-hang{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.so-hang .the{font-size:20px;padding:6px 14px}
+.so-hang .the.da-ghep{border-style:dashed;opacity:.75}
+.cap-ds{margin:6px 0;padding-left:18px}
+.phep-to{font-size:28px;font-weight:800;text-align:center;margin:8px 0;font-variant-numeric:tabular-nums}
+table.thu{border-collapse:collapse;margin:6px 0;font-variant-numeric:tabular-nums}
+table.thu th,table.thu td{border:1px solid var(--vien);padding:2px 6px;text-align:center;font-size:16px}
+table.thu input{width:4.5ch;font:inherit;font-size:16px;text-align:center;border:2px dashed var(--lam);border-radius:6px;background:var(--lam-nhat);color:var(--lam)}
+table.thu tr.dung td{background:var(--la-nhat)} table.thu tr.sai td{background:var(--san-nhat)}
+.nut-chieu{margin-left:auto;font-size:15px;padding:6px 12px}
+#thoat-chieu{display:none}
+:root[data-chieu] header,:root[data-chieu] nav,:root[data-chieu] .dan{display:none}
+:root[data-chieu] #thoat-chieu{display:block;position:fixed;top:8px;right:12px;z-index:5}
+:root[data-chieu] .khung{max-width:1280px;padding:8px 16px}
+:root[data-chieu] .dau-chieu{display:flex;align-items:center;gap:10px;padding-right:170px;margin-bottom:6px}
+:root[data-chieu] .dau-chieu h2{margin:0;flex:none}
+:root[data-chieu] .dau-chieu .bo-de{flex:1 1 auto;min-width:0;margin:0;flex-wrap:wrap;gap:6px}
+:root[data-chieu] .bo-de .the{flex:none;white-space:nowrap;font-size:15px;padding:4px 10px}
+:root[data-chieu] .nhat-ky{display:none}
+:root[data-chieu] .khung{zoom:1.5;padding:4px 8px 2px;max-width:none}
+:root[data-chieu] .ban{padding:8px 12px;border-radius:10px}
+:root[data-chieu] .vung{gap:12px}
+:root[data-chieu] .dau-chieu{padding-right:120px;gap:8px;margin-bottom:4px}
+:root[data-chieu] .ban h2{font-size:20px}
+:root[data-chieu] .bo-de .the,:root[data-chieu] .nhan-thanh,:root[data-chieu] table.phep tr.ten td,:root[data-chieu] table.phep tr.nho td.dau,:root[data-chieu] .nut{font-size:16px}
+:root[data-chieu] .nut,:root[data-chieu] .bo-de .the{padding:3px 10px}
+:root[data-chieu] .de-bai{font-size:17px;margin-bottom:4px}
+:root[data-chieu] .hoi{padding:6px 10px;margin-bottom:6px}
+:root[data-chieu] .hoi p{margin-bottom:4px}
+:root[data-chieu] .phan-hoi{min-height:0;padding:4px 10px;font-size:16px}
+:root[data-chieu] table.phep td{width:56px;height:42px;font-size:28px}
+:root[data-chieu] input.o{width:40px;height:40px;font-size:24px}
+:root[data-chieu] table.thu td,:root[data-chieu] table.thu th{padding:0 5px;font-size:16px}
+:root[data-chieu] table.thu input{height:22px;font-size:16px}
+:root[data-chieu] #thoat-chieu{font-size:24px;padding:4px 14px}
+:root[data-chieu] .so-hang{margin:4px 0} :root[data-chieu] .phep-to{margin:4px 0}
+:root[data-chieu] .ngoac{margin-top:22px} :root[data-chieu] .thanh{min-height:44px}
+
+.ve-goc{flex-basis:100%;order:-1;font-size:16px;font-weight:700;color:var(--lam);text-decoration:none}
+.ve-goc:hover{text-decoration:underline}
+.ban-quyen{max-width:1100px;margin:0 auto;padding:6px 16px 18px;font-size:15px;color:var(--chu-phu)}
+:root[data-chieu] .ban-quyen{display:none}
+</style>
+</head>
+<body>
+<button class="nut nut-chieu" id="thoat-chieu" type="button">Thoát chế độ chiếu</button>
+<div class="khung">
+  <header>
+    <a class="ve-goc" href="./" title="Về trang Phòng thí nghiệm Trạm Tư Duy">‹ Phòng thí nghiệm</a>
+<h1>Phòng thí nghiệm Trạm 3</h1><button class="nut nut-chieu" id="nut-chieu" type="button" title="Khi chia sẻ màn hình: ẩn tiêu đề và thanh chọn bàn">Chế độ chiếu</button>
+<span class="phu">Cả và phần · Mô phỏng thay đồ vật cho lớp học trực tuyến · 8 đến 9 tuổi · Máy chỉ ra chỗ chưa đúng, không nói đáp số.</span></header>
+<nav role="tablist" aria-label="Chọn bàn">
+  <button role="tab" id="tab-thanh" aria-controls="thanh" data-k="thanh">Bàn Sơ đồ thanh</button>
+  <button role="tab" id="tab-nhanh" aria-controls="nhanh" data-k="nhanh">Bàn Tính nhanh</button>
+  <button role="tab" id="tab-che" aria-controls="che" data-k="che">Bàn Ô bị che</button>
+</nav>
+
+<section class="ban" id="thanh" role="tabpanel" aria-labelledby="tab-thanh">
+  <div class="dau-chieu"><h2>Bàn Sơ đồ thanh</h2><div class="bo-de" role="group" aria-label="Chọn đề"></div></div>
+  <p class="dan">Con đọc đề, đoán trước con sẽ làm phép cộng hay phép trừ. Rồi con gõ số còn thiếu vào sơ đồ thanh và bấm Kiểm tra. Máy chỉ chỗ chưa đúng, không nói đáp số.</p>
+  <div class="vung">
+    <div>
+      <p class="de-bai" id="th-de"></p>
+      <div class="so-do" id="th-sodo"></div>
+    </div>
+    <div>
+      <div class="hoi"><p>Con đoán trước: con làm phép tính nào?</p>
+        <div class="hang"><button class="nut" data-th-doan="cong" aria-pressed="false">Phép cộng</button><button class="nut" data-th-doan="tru" aria-pressed="false">Phép trừ</button></div></div>
+      <div class="hang"><button class="nut chinh" id="th-kiem" type="button">Kiểm tra</button><button class="nut" id="th-lai" type="button">Làm lại đề này</button></div>
+      <div class="phan-hoi" id="th-ph" role="status" aria-live="polite" style="margin-top:10px"></div>
+      <ol class="nhat-ky" id="th-nk"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="ban" id="nhanh" role="tabpanel" aria-labelledby="tab-nhanh" hidden>
+  <div class="dau-chieu"><h2>Bàn Tính nhanh</h2><div class="bo-de" role="group" aria-label="Chọn đề"></div></div>
+  <p class="dan">Con đoán trước, rồi bấm nút để đổi số. Máy cho con thấy phép tính mới; con tính và gõ kết quả. Máy không nói đáp số.</p>
+  <div class="vung">
+    <div>
+      <p class="de-bai" id="nh-de"></p>
+      <div id="nh-vung"></div>
+    </div>
+    <div>
+      <div class="hoi" id="nh-hoi"><p id="nh-cau"></p><div class="hang" id="nh-chon"></div></div>
+      <div class="hang"><label for="nh-kq">Kết quả:</label><input class="so" id="nh-kq" inputmode="numeric" maxlength="3"><button class="nut chinh" id="nh-kiem" type="button">Kiểm tra</button><button class="nut" id="nh-lai" type="button">Làm lại đề này</button></div>
+      <div class="phan-hoi" id="nh-ph" role="status" aria-live="polite" style="margin-top:10px"></div>
+      <ol class="nhat-ky" id="nh-nk"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="ban" id="che" role="tabpanel" aria-labelledby="tab-che" hidden>
+  <div class="dau-chieu"><h2>Bàn Ô bị che</h2><div class="bo-de" role="group" aria-label="Chọn đề"></div></div>
+  <p class="dan">Con làm từ hàng đơn vị. Ở mỗi cột, con đoán trước: cột này có mượn (phép trừ) hay có nhớ sang cột bên trái (phép cộng) không? Rồi con gõ chữ số dưới ô che. Với chữ thay số, con điền bảng thử. Máy chỉ chỗ chưa đúng, không nói đáp số.</p>
+  <div class="vung" id="che-cot">
+    <div><table class="phep" aria-label="Phép tính đặt theo cột"></table></div>
+    <div>
+      <div class="hoi" id="hoi"><p id="cau-doan"></p><div class="hang">
+        <button class="nut" data-doan="1">Có</button><button class="nut" data-doan="0">Không</button></div></div>
+      <div class="phan-hoi" id="ph" role="status" aria-live="polite"></div>
+      <div class="hang" style="margin-top:10px"><button class="nut" id="lai">Làm lại đề này</button></div>
+      <ol class="nhat-ky" id="nk"></ol>
+    </div>
+  </div>
+  <div class="vung" id="che-chu" hidden>
+    <div><table class="thu" aria-label="Bảng thử"><thead><tr><th>N</th><th>M</th><th>MN + 2N</th><th>NM</th><th>Kết quả</th></tr></thead><tbody id="cc-bang"></tbody></table></div>
+    <div>
+      <p class="de-bai" id="cc-de"></p>
+      <div class="hang"><span>Vậy M =</span><input class="so" id="cc-m" inputmode="numeric" maxlength="1" aria-label="chữ số M"><span>N =</span><input class="so" id="cc-n" inputmode="numeric" maxlength="1" aria-label="chữ số N"><button class="nut chinh" id="cc-kiem" type="button">Kiểm tra</button></div>
+      <div class="phan-hoi" id="cc-ph" role="status" aria-live="polite" style="margin-top:10px"></div>
+    </div>
+  </div>
+</section>
+</div>
+<p class="ban-quyen">© Trạm Tư Duy · Phòng thí nghiệm dùng miễn phí cho học sinh.</p>
+<script>
+const keys=['thanh','nhanh','che'];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const nhatKy=(id,t)=>{const li=document.createElement('li'); li.textContent=t; const nk=$(id); nk.appendChild(li); while(nk.children.length>6) nk.removeChild(nk.firstChild);};
+const noiO=(id,t,lop)=>{const p=$(id); p.textContent=t; p.className='phan-hoi '+(lop||'');};
+const boDe=(ban,ds,chon)=>{const b=$(`#${ban} .bo-de`); b.innerHTML=ds.map((d,j)=>`<button class="the" type="button" aria-pressed="false" data-de="${j+1}">${d.ten}</button>`).join('');
+  b.querySelectorAll('.the').forEach(x=>x.addEventListener('click',()=>chon(+x.dataset.de)));};
+const danhDau=(ban,n)=>$$(`#${ban} .bo-de .the`).forEach((b,j)=>b.setAttribute('aria-pressed',String(j===n-1)));
+
+
+const DE_TH=[
+  {ten:'Cả 372, phần 145', cau:'Vườn có 372 cây, trong đó có 145 cây cam, còn lại là cây bưởi. Vườn có bao nhiêu cây bưởi?', ca:372, phan:[145,null], nhan:['cây cam','cây bưởi']},
+  {ten:'Thêm 45, có 136', cau:'Hoa có một số nhãn vở. Mẹ cho thêm 45 nhãn vở thì Hoa có 136 nhãn vở. Lúc đầu Hoa có bao nhiêu nhãn vở?', ca:136, phan:[null,45], nhan:['lúc đầu','mẹ cho thêm']},
+  {ten:'Cho 26, còn 58', cau:'Nam cho em 26 viên bi thì Nam còn 58 viên bi. Lúc đầu Nam có bao nhiêu viên bi?', ca:null, phan:[26,58], nhan:['cho em','còn lại']},
+  {ten:'Cả 528, phần 263', cau:'Tí tính 528 − 263 = 345. Con vẽ sơ đồ thanh để thử lại: phần chưa biết là bao nhiêu?', ca:528, phan:[263,null], nhan:['số trừ','hiệu']},
+  {ten:'Ba phần, cả 575', cau:'Ba thùng có tất cả 575 quả cam. Thùng một có 160 quả, thùng hai có 185 quả. Thùng ba có bao nhiêu quả?', ca:575, phan:[160,185,null], nhan:['thùng một','thùng hai','thùng ba']},
+];
+let th, thDoan;
+const thDap=d=>d.ca===null?d.phan.reduce((a,b)=>a+b,0):d.ca-d.phan.filter(x=>x!==null).reduce((a,b)=>a+b,0);
+const thPhepDung=d=>d.ca===null?'cong':'tru';
+function thVe(){
+  const d=th, ans=thDap(d), w=d.phan.map(x=>x===null?ans:x), tong=w.reduce((a,b)=>a+b,0);
+  const o=v=>v===null?`<input class="so" id="th-o" inputmode="numeric" maxlength="3" aria-label="số chưa biết">`:v;
+  $('#th-de').textContent=d.cau;
+  $('#th-sodo').innerHTML=`<div class="ngoac"><span class="ca">${o(d.ca)} (cả)</span></div>`+
+    `<div class="thanh">${d.phan.map((x,i)=>`<div class="phan${x===null?' chua':''}" style="flex:${w[i]/tong}">${o(x)}</div>`).join('')}</div>`+
+    `<div class="nhan-thanh">${d.phan.map((x,i)=>`<span style="flex:${w[i]/tong}">${d.nhan[i]}</span>`).join('')}</div>`;
+}
+function thChon(n){ th=DE_TH[n-1]||DE_TH[0]; thDoan=null; danhDau('thanh',DE_TH.indexOf(th)+1); $$('[data-th-doan]').forEach(b=>b.setAttribute('aria-pressed','false'));
+  $('#th-nk').innerHTML=''; noiO('#th-ph',''); thVe(); }
+function thKiem(){
+  const i=$('#th-o'); if(!i) return; const v=i.value.replace(/\D/g,''); i.value=v;
+  if(thDoan===null){ noiO('#th-ph','Con đoán trước: con làm phép cộng hay phép trừ?','chua'); return; }
+  if(v===''){ noiO('#th-ph','Con gõ số còn thiếu vào sơ đồ thanh.','chua'); return; }
+  const x=+v, d=th, ans=thDap(d), biet=d.phan.filter(p=>p!==null), dung=thPhepDung(d), doanDung=thDoan===dung;
+  if(x===ans){ i.classList.add('dung'); i.disabled=true;
+    noiO('#th-ph',`Đúng: các phần gộp lại bằng cả. ${doanDung?'Con đoán đúng':'Con đoán chưa đúng'}: bài này làm phép ${dung==='cong'?'cộng':'trừ'}.`,'tot');
+    nhatKy('#th-nk',`Thử ${x}: đúng; đoán ${doanDung?'đúng':'chưa đúng'}.`); return; }
+  let loi;
+  if(d.ca!==null){
+    if(x===d.ca+biet.reduce((a,b)=>a+b,0)) loi='Con đã cộng. Ở đề này, cả đã biết; muốn tìm một phần, con làm phép tính nào?';
+    else if(x>d.ca) loi='Một phần không thể lớn hơn cả. Con xem lại: số nào là cả?';
+    else loi='Các phần gộp lại chưa bằng cả. Con tính lại rồi thử lại bằng phép cộng.';
+  } else {
+    if(biet.length===2&&x===Math.abs(biet[0]-biet[1])) loi='Con đã trừ. Ở đề này, cả chưa biết; cả bằng các phần gộp lại.';
+    else if(x<Math.max(...biet)) loi='Cả phải lớn hơn mỗi phần. Con xem lại: cả bằng các phần gộp lại.';
+    else loi='Các phần gộp lại chưa bằng số con ghi. Con tính lại.';
+  }
+  noiO('#th-ph',loi,'chua'); nhatKy('#th-nk',`Thử ${x}: chưa đúng.`); i.select();
+}
+boDe('thanh',DE_TH,thChon);
+$$('[data-th-doan]').forEach(b=>b.addEventListener('click',()=>{thDoan=b.dataset.thDoan; $$('[data-th-doan]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  noiO('#th-ph','Con gõ số còn thiếu vào sơ đồ thanh, rồi bấm Kiểm tra.'); const i=$('#th-o'); if(i) i.focus();}));
+$('#th-kiem').addEventListener('click',thKiem);
+$('#th-lai').addEventListener('click',()=>thChon(DE_TH.indexOf(th)+1));
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='th-o') thKiem();});
+
+
+const DE_NH=[
+  {ten:'37 + 145 + 63 + 55', loai:'ghep', so:[37,145,63,55]},
+  {ten:'298 + 457', loai:'doi', a:298, b:457, op:'+'},
+  {ten:'524 − 197', loai:'doi', a:524, b:197, op:'−'},
+  {ten:'1 đến 10', loai:'day', dau:1, cuoi:10},
+  {ten:'3 đến 13', loai:'day', dau:3, cuoi:13},
+];
+let nh, nhDoan, nhChon_=[], nhCap=[], nhBuoc=0;
+const nhDap=d=>d.loai==='ghep'?d.so.reduce((a,b)=>a+b,0):d.loai==='doi'?(d.op==='+'?d.a+d.b:d.a-d.b):(d.dau+d.cuoi)*(d.cuoi-d.dau+1)/2;
+const them=d=>d.op==='+'?(100-d.a%100)%100:(100-d.b%100)%100;
+function nhVe(){
+  const d=nh; $('#nh-de').textContent=d.loai==='ghep'?`Tính nhanh: ${d.ten}.`:d.loai==='doi'?`Tính nhẩm: ${d.ten}.`:`Tính nhanh tổng các số từ ${d.dau} đến ${d.cuoi}.`;
+  const c=$('#nh-chon'); let h='';
+  if(d.loai==='ghep'){
+    $('#nh-cau').textContent='Con bấm hai số để ghép thành một cặp. Cặp nào cộng lại được số tròn chục, tròn trăm?';
+    $('#nh-vung').innerHTML=`<div class="so-hang">${d.so.map((x,i)=>`<button class="the" type="button" data-i="${i}">${x}</button>`).join('')}</div><ol class="cap-ds" id="nh-cap"></ol>`;
+    $$('#nh-vung .the').forEach(b=>b.addEventListener('click',()=>nhGhep(+b.dataset.i,b)));
+  } else if(d.loai==='doi'){
+    const t=them(d);
+    $('#nh-cau').textContent=d.op==='+'?`Con đoán trước: thêm ${t} vào ${d.a} và bớt ${t} ở ${d.b} thì tổng thế nào?`:`Con đoán trước: cùng thêm ${t} vào ${d.a} và ${d.b} thì hiệu thế nào?`;
+    h=['Tăng','Giảm','Không đổi'].map(x=>`<button class="nut" type="button" data-nh-doan="${x}" aria-pressed="false">${x}</button>`).join('');
+    $('#nh-vung').innerHTML=`<div class="phep-to" id="nh-phep">${d.a} ${d.op} ${d.b}</div><div class="hang" id="nh-nut"></div>`;
+  } else {
+    $('#nh-cau').textContent='Con đoán trước: các số này ghép đầu với cuối được mấy cặp?';
+    h=`<input class="so" id="nh-doan-so" inputmode="numeric" maxlength="2" aria-label="số cặp con đoán"><button class="nut" type="button" id="nh-ghi-doan">Ghi lại</button>`;
+    const ds=[]; for(let x=d.dau;x<=d.cuoi;x++) ds.push(x);
+    $('#nh-vung').innerHTML=`<div class="so-hang">${ds.map(x=>`<span class="the" data-x="${x}">${x}</span>`).join('')}</div><div class="hang"><button class="nut" type="button" id="nh-noi">Ghép đầu với cuối</button></div><ol class="cap-ds" id="nh-cap"></ol>`;
+  }
+  c.innerHTML=h;
+  $$('[data-nh-doan]').forEach(b=>b.addEventListener('click',()=>{nhDoan=b.dataset.nhDoan; $$('[data-nh-doan]').forEach(x=>x.setAttribute('aria-pressed',String(x===b))); nhDoi();}));
+  const g=$('#nh-ghi-doan'); if(g) g.addEventListener('click',()=>{nhDoan=$('#nh-doan-so').value; noiO('#nh-ph',`Con đoán ${nhDoan} cặp. Bấm “Ghép đầu với cuối” để xem.`);});
+  const n_=$('#nh-noi'); if(n_) n_.addEventListener('click',nhNoi);
+}
+function nhGhep(i,b){
+  if(b.classList.contains('da-ghep')) return;
+  if(nhChon_.includes(i)){ nhChon_=nhChon_.filter(x=>x!==i); b.setAttribute('aria-pressed','false'); return; }
+  nhChon_.push(i); b.setAttribute('aria-pressed','true');
+  if(nhChon_.length<2) return;
+  const [p,q]=nhChon_; nhChon_=[]; const d=nh, s=d.so[p]+d.so[q];
+  $$('#nh-vung .the').forEach(x=>{ if([p,q].includes(+x.dataset.i)){ x.classList.add('da-ghep'); x.setAttribute('aria-pressed','false'); } });
+  const tron=s%100===0?'số tròn trăm':s%10===0?'số tròn chục':'chưa tròn';
+  const li=document.createElement('li'); li.textContent=`${d.so[p]} + ${d.so[q]} = ${s}: ${tron}`; $('#nh-cap').appendChild(li);
+  noiO('#nh-ph',tron==='chưa tròn'?'Cặp này chưa tròn. Con bấm “Làm lại đề này” để ghép cặp khác.':'Cặp này ghép được số tròn. Con ghép tiếp, rồi gõ kết quả.', tron==='chưa tròn'?'chua':'tot');
+}
+function nhDoi(){
+  const d=nh, t=them(d), nut=$('#nh-nut');
+  nut.innerHTML=d.op==='+'?`<button class="nut" type="button" id="nh-b1">Thêm ${t} vào ${d.a}, bớt ${t} ở ${d.b}</button>`
+    :`<button class="nut" type="button" id="nh-b1">Cùng thêm ${t} vào hai số</button><button class="nut" type="button" id="nh-b2">Cách của Su: thêm ${t} vào ${d.b}, bớt ${t} ở ${d.a}</button>`;
+  $('#nh-b1').addEventListener('click',()=>{ $('#nh-phep').textContent=d.op==='+'?`${d.a+t} + ${d.b-t}`:`${d.a+t} − ${d.b+t}`;
+    const dung=nhDoan==='Không đổi'; noiO('#nh-ph',`${dung?'Con đoán đúng':'Con đoán chưa đúng'}: ${d.op==='+'?'tổng':'hiệu'} không đổi. Con tính phép tính mới và gõ kết quả.`,dung?'tot':'chua'); });
+  const b2=$('#nh-b2'); if(b2) b2.addEventListener('click',()=>{ $('#nh-phep').textContent=`${d.a-t} − ${d.b+t} = ${d.a-t-d.b-t}`;
+    noiO('#nh-ph',`Cách này làm hiệu đổi: hiệu bé đi ${t} + ${t} = ${2*t}. Với phép trừ, con cùng thêm vào hai số.`,'chua'); });
+}
+function nhNoi(){
+  const d=nh, n=d.cuoi-d.dau+1, k=nhBuoc; if(k>=Math.floor(n/2)){ if(n%2&&!$('#nh-giua')){ const li=document.createElement('li'); li.id='nh-giua'; li.textContent=`Còn số ${d.dau+Math.floor(n/2)} ở giữa, chưa có cặp.`; $('#nh-cap').appendChild(li);} return; }
+  const a=d.dau+k, b=d.cuoi-k; nhBuoc++;
+  $$(`#nh-vung .so-hang .the`).forEach(x=>{ if([a,b].includes(+x.dataset.x)) x.classList.add('da-ghep'); });
+  const li=document.createElement('li'); li.textContent=`${a} + ${b} = ${a+b}`; $('#nh-cap').appendChild(li);
+  if(nhBuoc===Math.floor(n/2)) noiO('#nh-ph',`Đã ghép ${nhBuoc} cặp${nhDoan?`; con đoán ${nhDoan} cặp`:''}. ${n%2?'Bấm thêm một lần: còn số nào chưa có cặp?':'Con tính tổng và gõ kết quả.'}`);
+}
+function nhChon(n){ nh=DE_NH[n-1]||DE_NH[0]; nhDoan=null; nhChon_=[]; nhBuoc=0; danhDau('nhanh',DE_NH.indexOf(nh)+1);
+  const k=$('#nh-kq'); k.value=''; k.disabled=false; k.classList.remove('dung'); $('#nh-nk').innerHTML=''; noiO('#nh-ph',''); nhVe(); }
+function nhKiem(){
+  const k=$('#nh-kq'), v=k.value.replace(/\D/g,''); k.value=v; if(v==='') { noiO('#nh-ph','Con gõ kết quả.','chua'); return; }
+  const d=nh, x=+v, ans=nhDap(d);
+
+  if((d.loai==='doi'||d.loai==='day')&&(nhDoan===undefined||nhDoan===null||nhDoan==='')){ noiO('#nh-ph','Con đoán trước đã, rồi mới gõ kết quả.','chua'); return; }
+  if(x===ans){ k.classList.add('dung'); k.disabled=true; noiO('#nh-ph','Đúng. Con thử lại bằng phép tính ngược để chắc chắn.','tot'); nhatKy('#nh-nk',`Kết quả ${x}: đúng.`); return; }
+  let loi='Chưa đúng. Con tính lại phép tính mới trên màn hình.';
+  if(d.loai==='doi'&&d.op==='−'&&x===ans-2*them(d)) loi='Con đã bớt ở số bị trừ. Với phép trừ, con cùng thêm vào hai số.';
+  if(d.loai==='doi'&&d.op==='+'&&x===ans+2*them(d)) loi='Con đã thêm vào cả hai số. Với phép cộng, thêm vào số này thì bớt ở số kia.';
+  if(d.loai==='day'&&(d.cuoi-d.dau+1)%2&&x===ans-(d.dau+d.cuoi)/2) loi='Con đã cộng các cặp. Còn số ở giữa chưa có cặp: con đã cộng số ấy chưa?';
+  if(x%10!==ans%10&&d.loai==='ghep') loi='Chữ số hàng đơn vị chưa đúng. Con cộng lại từng cặp.';
+  noiO('#nh-ph',loi,'chua'); nhatKy('#nh-nk',`Kết quả ${x}: chưa đúng.`); k.select();
+}
+boDe('nhanh',DE_NH,nhChon);
+$('#nh-kiem').addEventListener('click',nhKiem);
+$('#nh-lai').addEventListener('click',()=>nhChon(DE_NH.indexOf(nh)+1));
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='nh-kq') nhKiem();});
+
+
+
+const DE=[
+  {ten:'3□7 + △58 = 785', a:'3□7', b:'△58', c:'785', op:'+'},
+  {ten:'8□2 − △79 = 61○', a:'8□2', b:'△79', c:'61○', op:'−'},
+  {ten:'5□6 + △39 = 865', a:'5□6', b:'△39', c:'865', op:'+'},
+  {ten:'5□0 − △64 = 31○', a:'5□0', b:'△64', c:'31○', op:'−'},
+  {ten:'MN + 2N = NM', loai:'chu'},
+];
+const O='□△○';
+let de, giai, cot, doan, xong;
+function giaiDe(d){
+  const o=[...new Set((d.a+d.b+d.c).split('').filter(x=>O.includes(x)))];
+  for(let n=0;n<Math.pow(10,o.length);n++){
+    const g={}; o.forEach((k,i)=>g[k]=Math.floor(n/Math.pow(10,i))%10);
+    const v=s=>s.split('').map(x=>O.includes(x)?g[x]:x).join('');
+    const A=v(d.a),B=v(d.b),C=v(d.c);
+    if([A,B,C].some(t=>t.length>1&&t[0]==='0')) continue;
+    if(d.op==='−'?(+A-+B===+C):(+A+ +B===+C)) return g;
+  }
+}
+function so(s){return s.padStart(3,' ').split('');}
+function cotCo(h){
+  const v=s=>so(s).map(x=>O.includes(x)?giai[x]:(x===' '?0:+x));
+  const A=v(de.a),B=v(de.b); let m=0;
+  for(let k=2;k>=h;k--){ const r=de.op==='−'?A[k]-m-B[k]:A[k]+B[k]+m; const t=de.op==='−'?(r<0?1:0):(r>9?1:0); if(k===h) return t; m=t; }
+}
+function ve(){
+  const t=$('table.phep'); const A=so(de.a),B=so(de.b),C=so(de.c);
+  const o=(x,h)=>O.includes(x)?`<input class="o" inputmode="numeric" maxlength="1" placeholder="${x}" data-o="${x}" data-h="${h}" aria-label="chữ số dưới ô ${x}, hàng ${['trăm','chục','đơn vị'][h]}">`:(x===' '?'':x);
+  const nho=de.op==='+'?'số nhớ':'mượn';
+  t.innerHTML=`<tr class="ten"><td class="dau"></td><td>Trăm</td><td>Chục</td><td>Đơn vị</td></tr>`+
+    `<tr class="nho"><td class="dau">${nho}</td><td data-n="0"></td><td data-n="1"></td><td data-n="2"></td></tr>`+
+    `<tr><td class="dau"></td>${A.map((x,h)=>`<td data-c="${h}">${o(x,h)}</td>`).join('')}</tr>`+
+    `<tr><td class="dau">${de.op}</td>${B.map((x,h)=>`<td data-c="${h}">${o(x,h)}</td>`).join('')}</tr>`+
+    `<tr class="kq"><td class="dau"></td>${C.map((x,h)=>`<td data-c="${h}">${o(x,h)}</td>`).join('')}</tr>`;
+  $$('input.o').forEach(i=>{i.disabled=true; i.addEventListener('input',()=>kiem(i));});
+}
+function hoiCot(){
+  $$('td[data-c]').forEach(td=>td.classList.toggle('dang',+td.dataset.c===cot));
+  const ten=['trăm','chục','đơn vị'][cot];
+  $('#cau-doan').textContent=de.op==='−'?`Hàng ${ten}: cột này có phải mượn không?`:`Hàng ${ten}: cột này có nhớ sang cột bên trái không?`;
+  $('#hoi').hidden=false; doan=null;
+  $$('[data-doan]').forEach(b=>b.setAttribute('aria-pressed','false'));
+  $$('input.o').forEach(i=>i.disabled=true);
+}
+const noi=(t,lop)=>noiO('#ph',t,lop), ghi=t=>nhatKy('#nk',t);
+function kiem(i){
+  const v=i.value.replace(/\D/g,''); i.value=v; if(v==='') return;
+  const k=i.dataset.o, h=+i.dataset.h, dung=giai[k];
+  if(+v===dung){
+    i.classList.add('dung'); i.disabled=true;
+    const thuc=cotCo(h);
+    noi(`Chữ số này đúng. ${doan===!!thuc?'Con đoán đúng':'Con đoán chưa đúng'}: cột này ${thuc?'có':'không'} ${de.op==='−'?'mượn':'nhớ sang cột bên trái'}.`,'tot');
+    ghi(`Hàng ${['trăm','chục','đơn vị'][h]}: ${k} đúng; đoán ${doan===!!thuc?'đúng':'chưa đúng'}.`);
+    if(thuc&&h>0) $(`td[data-n="${h-1}"]`).textContent='1';
+    cot--; if(cot<0) ketThuc(); else hoiCot();
+    return;
+  }
+  const A=so(de.a),C=so(de.c), x=+v, m=h<2?cotCo(h+1):0, oKQ=O.includes(C[h]);
+  const B=so(de.b);
+  const quen=m?(de.op==='−'?(O.includes(A[h])?(dung+9)%10:(dung+1)%10):(oKQ?(dung+9)%10:(dung+1)%10)):null;
+  let loi;
+  if(de.op==='−'){
+    const tren=O.includes(A[h])?null:+A[h], duoi=O.includes(B[h])?null:+B[h];
+    const lonTruBe=(oKQ&&tren!==null&&duoi!==null&&tren-m<duoi&&x===Math.abs(tren-m-duoi));
+    if(lonTruBe) loi='Cột này có cần mượn không? Ở phép trừ, con lấy số trên trừ số dưới; không trừ được thì mượn 1 ở cột bên trái.';
+    else if(quen!==null&&x===quen) loi='Cột này đã cho cột bên phải mượn 1. Con đã bớt 1 ở cột này chưa?';
+    else loi='Chưa đúng. Con thử đổi sang phép cộng: hiệu cộng số trừ bằng số bị trừ, rồi làm cột này.';
+  } else loi=(quen!==null&&x===quen)?'Cột bên phải có nhớ sang cột này. Con đã cộng số nhớ chưa?':'Chưa đúng. Con cộng lại cột này, nhìn chữ số của tổng mà chọn.';
+  noi(loi,'chua'); ghi(`Hàng ${['trăm','chục','đơn vị'][h]}: thử ${x}, chưa đúng.`); i.select();
+}
+function ketThuc(){
+  $('#hoi').hidden=true; $$('td[data-c]').forEach(td=>td.classList.remove('dang')); xong=true;
+  const v=s=>s.split('').map(x=>O.includes(x)?giai[x]:x).join('');
+  noi(`Con đã điền đủ: ${v(de.a)} ${de.op} ${v(de.b)} = ${v(de.c)}. Con tự tính lại cả phép tính để kiểm.`,'tot');
+}
+
+function veChu(){
+  $('#cc-de').textContent='MN + 2N = NM. Chữ cái khác nhau là chữ số khác nhau. Con thử N từ 1 đến 9: M là chữ số hàng đơn vị của N + N.';
+  $('#cc-bang').innerHTML=[1,2,3,4,5,6,7,8,9].map(n=>`<tr data-n="${n}"><td>${n}</td><td><input data-k="m" inputmode="numeric" maxlength="1" aria-label="M khi N bằng ${n}"></td><td><input data-k="t" inputmode="numeric" maxlength="3" aria-label="MN cộng 2N khi N bằng ${n}"></td><td class="nm"></td><td class="kq"></td></tr>`).join('');
+  $$('#cc-bang input').forEach(i=>i.addEventListener('change',()=>kiemDong(i.closest('tr'))));
+  ['#cc-m','#cc-n'].forEach(s=>{$(s).value=''; $(s).classList.remove('dung');}); noiO('#cc-ph','');
+}
+function kiemDong(tr){
+  const n=+tr.dataset.n, im=tr.querySelector('[data-k="m"]'), it=tr.querySelector('[data-k="t"]');
+  const m=(2*n)%10;
+  if(im.value!==''&&+im.value!==m){ noiO('#cc-ph',`Dòng N = ${n}: M là chữ số hàng đơn vị của ${n} + ${n}. Con tính lại.`,'chua'); return; }
+  if(im.value==='') return;
+  if(m===0){ tr.querySelector('.nm').textContent='M = 0: loại'; tr.className='sai'; return; }
+  tr.querySelector('.nm').textContent=String(10*n+m);
+  if(it.value==='') return;
+  const t=10*m+n+20+n;
+  if(+it.value!==t){ noiO('#cc-ph',`Dòng N = ${n}: con cộng lại ${m}${n} + 2${n}.`,'chua'); return; }
+  const ok=t===10*n+m&&m!==n; tr.className=ok?'dung':'sai'; tr.querySelector('.kq').textContent=ok?'đúng':'sai';
+  noiO('#cc-ph',ok?'Dòng này đúng. Con xem các dòng khác còn dòng nào đúng không.':'Dòng này sai: MN + 2N khác NM.',ok?'tot':'');
+}
+$('#cc-kiem').addEventListener('click',()=>{
+  const m=+$('#cc-m').value, n=+$('#cc-n').value;
+  if($('#cc-m').value===''||$('#cc-n').value===''){ noiO('#cc-ph','Con gõ M và N.','chua'); return; }
+  if(m===4&&n===7){ $('#cc-m').classList.add('dung'); $('#cc-n').classList.add('dung'); noiO('#cc-ph','Đúng. Con thử lại cả phép cộng một lần nữa.','tot'); return; }
+  noiO('#cc-ph',`Con thay M = ${m}, N = ${n} vào: MN + 2N có bằng NM không? Con xem lại dòng N = ${n} trong bảng.`,'chua');
+});
+function chonDe(n){
+  de=DE[n-1]||DE[0]; danhDau('che',DE.indexOf(de)+1);
+  const chu=de.loai==='chu'; $('#che-cot').hidden=chu; $('#che-chu').hidden=!chu;
+  if(chu){ veChu(); return; }
+  giai=giaiDe(de); cot=2; xong=false; $('#nk').innerHTML=''; noi(''); ve(); hoiCot();
+}
+boDe('che',DE,chonDe);
+$$('[data-doan]').forEach(b=>b.addEventListener('click',()=>{
+  doan=b.dataset.doan==='1'; $$('[data-doan]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  const o_=$$(`input.o[data-h="${cot}"]`);
+  if(!o_.length){
+    const thuc=cotCo(cot);
+    noi(`Cột này không có ô che. ${doan===!!thuc?'Con đoán đúng':'Con đoán chưa đúng'}: cột này ${thuc?'có':'không'} ${de.op==='−'?'mượn':'nhớ sang cột bên trái'}.`,'tot');
+    ghi(`Hàng ${['trăm','chục','đơn vị'][cot]}: không có ô che; đoán ${doan===!!thuc?'đúng':'chưa đúng'}.`);
+    if(thuc&&cot>0) $(`td[data-n="${cot-1}"]`).textContent='1';
+    cot--; if(cot<0) ketThuc(); else hoiCot(); return;
+  }
+  o_.forEach(i=>{i.disabled=false; i.focus();});
+  noi('Con gõ chữ số dưới ô che ở cột này.');
+}));
+$('#lai').addEventListener('click',()=>chonDe(DE.indexOf(de)+1));
+
+
+
+const CHON={thanh:[thChon,DE_TH], nhanh:[nhChon,DE_NH], che:[chonDe,DE]};
+const dangChieu=()=>document.documentElement.hasAttribute('data-chieu');
+function vuaKhung(){ const k=$('.khung'); const f=dangChieu()&&innerWidth>=700?Math.max(.6,Math.min(1,innerWidth/1280,innerHeight/720)):1, nho=f<.999;
+  k.style.zoom=nho?String(+(1.5*f).toFixed(3)):''; const b=$('#thoat-chieu'); b.style.zoom=nho?String(+f.toFixed(3)):''; }
+function datChieu(c){ if(c) document.documentElement.setAttribute('data-chieu','1'); else document.documentElement.removeAttribute('data-chieu'); vuaKhung(); }
+function moTab(k){ if(!keys.includes(k)) k=keys[0];
+  keys.forEach(x=>{ $('#'+x).hidden=x!==k; $('#tab-'+x).setAttribute('aria-selected',String(x===k)); }); return k; }
+function docNeo(){ const h=decodeURIComponent((location.hash||'').slice(1)).split(/[&?]/);
+  let k=(h[0]||'').replace(/^l3t3-/,''), de=null; const a=/^(.+)_de(\d+)$/.exec(k); if(a){ k=a[1]; de=+a[2]; }
+  h.slice(1).forEach(x=>{ const m=/^de=(.*)$/.exec(x); if(m){ const n=parseInt(m[1],10); de=isNaN(n)?1:n; } });
+  const chieu=h.slice(1).some(x=>/^chieu(=1)?$/.test(x))||new URLSearchParams(location.search).get('chieu')==='1';
+  return {k, de, chieu}; }
+function apNeo(n){ const k=moTab(n.k); const [f,L]=CHON[k];
+  f(n.de===null?1:Math.min(L.length,Math.max(1,n.de))); datChieu(n.chieu); }
+$$('nav button').forEach(b=>b.addEventListener('click',()=>{ const k=moTab(b.dataset.k); CHON[k][0](1);
+  try{ history.replaceState(null,'','#'+k+(dangChieu()?'&chieu=1':'')); }catch(e){} }));
+const banDang=()=>keys.find(x=>!$('#'+x).hidden)||keys[0];
+$('#nut-chieu').addEventListener('click',()=>{ datChieu(true); try{ history.replaceState(null,'','#'+banDang()+'&chieu=1'); }catch(e){} });
+$('#thoat-chieu').addEventListener('click',()=>{ datChieu(false); try{ history.replaceState(null,'','#'+banDang()); }catch(e){} });
+window.addEventListener('hashchange',()=>apNeo(docNeo())); window.addEventListener('resize',vuaKhung);
+apNeo(docNeo());
+</script>
+</body>
+</html>
